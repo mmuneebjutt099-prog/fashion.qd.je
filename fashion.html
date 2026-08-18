@@ -178,6 +178,12 @@
         .article {
             border: 1px solid var(--border);
             background: #fff;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .article:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,.08);
         }
 
         .article img {
@@ -209,6 +215,24 @@
         .article p {
             color: var(--muted);
             font-size: 15px;
+        }
+
+        /* Read Article Button */
+        .read-more {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 18px;
+            background: var(--dark);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 3px;
+            transition: .2s ease;
+        }
+
+        .read-more:hover {
+            background: var(--accent);
+            color: #fff;
         }
 
         .guide {
@@ -302,6 +326,7 @@
         }
 
         @media (max-width: 850px) {
+
             .header-inner {
                 flex-direction: column;
                 padding: 20px 0;
@@ -323,6 +348,7 @@
         }
 
         @media (max-width: 520px) {
+
             section {
                 padding: 60px 0;
             }
@@ -370,7 +396,9 @@
     <main>
 
         <section class="page-hero">
+
             <div class="container">
+
                 <div class="hero-content">
 
                     <div class="eyebrow">
@@ -388,14 +416,18 @@
                     </p>
 
                 </div>
+
             </div>
+
         </section>
+
 
         <section>
 
             <div class="container">
 
                 <div class="heading">
+
                     <span>Latest Fashion</span>
 
                     <h2>
@@ -406,9 +438,14 @@
                         Stay updated with fashion inspiration, wardrobe ideas
                         and practical styling advice for everyday life.
                     </p>
+
                 </div>
 
+
                 <div class="articles">
+
+
+                    <!-- ARTICLE 1 -->
 
                     <article class="article">
 
@@ -431,13 +468,20 @@
                                 Discover fresh fashion trends and learn how
                                 to bring modern looks into your wardrobe.
                             </p>
-                            <a href="articles/summer-fashion-trends.html" class="read-more">
-    Read Article →
+
+                            <a
+                                href="articles/summer-fashion-trends.html"
+                                class="read-more"
+                            >
+                                Read Article →
                             </a>
 
                         </div>
 
                     </article>
+
+
+                    <!-- ARTICLE 2 -->
 
                     <article class="article">
 
@@ -464,6 +508,9 @@
                         </div>
 
                     </article>
+
+
+                    <!-- ARTICLE 3 -->
 
                     <article class="article">
 
@@ -496,6 +543,7 @@
             </div>
 
         </section>
+
 
         <section class="guide">
 
@@ -543,11 +591,13 @@
 
         </section>
 
+
         <section>
 
             <div class="container">
 
                 <div class="heading">
+
                     <span>Style Advice</span>
 
                     <h2>
@@ -557,7 +607,9 @@
                     <p>
                         Simple ideas to make everyday styling easier.
                     </p>
+
                 </div>
+
 
                 <div class="tips">
 
@@ -574,6 +626,7 @@
 
                     </div>
 
+
                     <div class="tip">
 
                         <h3>
@@ -587,6 +640,7 @@
 
                     </div>
 
+
                     <div class="tip">
 
                         <h3>
@@ -599,6 +653,7 @@
                         </p>
 
                     </div>
+
 
                     <div class="tip">
 
@@ -621,6 +676,7 @@
 
     </main>
 
+
     <footer>
 
         <div class="container">
@@ -628,16 +684,24 @@
             <div class="footer-grid">
 
                 <div>
-                    <h3>Fashion QD</h3>
+
+                    <h3>
+                        Fashion QD
+                    </h3>
 
                     <p>
                         Fashion, beauty and lifestyle inspiration for
                         modern everyday living.
                     </p>
+
                 </div>
 
+
                 <div>
-                    <h3>Explore</h3>
+
+                    <h3>
+                        Explore
+                    </h3>
 
                     <p>
                         <a href="index.html">Home</a>
@@ -653,8 +717,12 @@
 
                 </div>
 
+
                 <div>
-                    <h3>Information</h3>
+
+                    <h3>
+                        Information
+                    </h3>
 
                     <p>
                         <a href="about.html">About Us</a>
@@ -668,6 +736,7 @@
 
             </div>
 
+
             <div class="footer-bottom">
                 © 2026 Fashion QD. All rights reserved.
             </div>
@@ -677,4 +746,4 @@
     </footer>
 
 </body>
-</html>
+                        </html>
