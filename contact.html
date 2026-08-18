@@ -4,41 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Fashion QD | Get in Touch</title>
+    <title>Contact Us | Fashion QD</title>
 
-    <meta name="description" content="Contact Fashion QD for general inquiries, partnerships, collaborations and business opportunities.">
+    <meta name="description" content="Contact Fashion QD for general inquiries, partnerships, collaborations and content-related questions.">
 
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://fashion.qd.je/contact.html">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Us | Fashion QD">
+    <meta property="og:description" content="Get in touch with Fashion QD for inquiries, partnerships and collaborations.">
+    <meta property="og:url" content="https://fashion.qd.je/contact.html">
+    <meta property="og:site_name" content="Fashion QD">
+
+    <meta name="theme-color" content="#111111">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --dark: #111111;
+            --text: #333333;
+            --muted: #707070;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --border: #e5e5e5;
+            --accent: #b48a64;
+            --max-width: 1180px;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background: #fff;
+            font-family: "DM Sans", Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
             line-height: 1.7;
         }
 
         a {
             text-decoration: none;
+            color: inherit;
         }
 
         .container {
-            width: 92%;
-            max-width: 1180px;
+            width: min(92%, var(--max-width));
             margin: auto;
+        }
+
+        .top-bar {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            letter-spacing: .3px;
         }
 
         header {
             background: #fff;
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom: 1px solid var(--border);
         }
 
         .header-inner {
@@ -50,167 +87,277 @@
         }
 
         .logo {
-            font-family: Georgia, serif;
-            font-size: 31px;
-            font-weight: bold;
-            color: #111;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark);
         }
 
         .logo span {
-            color: #b48a64;
+            color: var(--accent);
         }
 
         nav {
             display: flex;
+            align-items: center;
             gap: 27px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: #333;
             font-size: 14px;
-            font-weight: bold;
+            font-weight: 600;
+            color: #333;
+            transition: .2s ease;
         }
 
         nav a:hover {
-            color: #b48a64;
+            color: var(--accent);
         }
 
-        .hero {
-            background: #f7f5f2;
-            text-align: center;
-            padding: 95px 20px;
+        .page-hero {
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.30)),
+                url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+            min-height: 390px;
+            display: flex;
+            align-items: center;
+            color: #fff;
         }
 
-        .hero span {
-            color: #b48a64;
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .eyebrow {
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 13px;
-            font-weight: bold;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        .hero h1 {
-            font-family: Georgia, serif;
-            color: #111;
-            font-size: 55px;
-            margin: 15px 0;
+        .page-hero h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(45px, 6vw, 70px);
+            line-height: 1.05;
+            margin-bottom: 20px;
         }
 
-        .hero p {
-            max-width: 680px;
-            margin: auto;
-            color: #666;
-            font-size: 17px;
+        .page-hero p {
+            font-size: 18px;
+            color: #eeeeee;
+            max-width: 620px;
         }
 
         .contact-section {
-            padding: 80px 0;
+            padding: 90px 0;
         }
 
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 950px;
-            margin: auto;
+            gap: 70px;
+            align-items: start;
         }
 
-        .contact-card {
-            border: 1px solid #e5e5e5;
-            padding: 40px;
-            background: #fff;
-        }
-
-        .contact-card h2 {
-            font-family: Georgia, serif;
-            font-size: 32px;
-            color: #111;
-            margin-bottom: 15px;
-        }
-
-        .contact-card p {
-            color: #666;
-            margin-bottom: 18px;
-        }
-
-        .contact-link {
-            display: inline-block;
-            color: #b48a64;
-            font-weight: bold;
-            word-break: break-word;
-        }
-
-        .contact-link:hover {
-            text-decoration: underline;
-        }
-
-        .business {
-            max-width: 950px;
-            margin: 30px auto 0;
-            padding: 40px;
-            background: #f7f5f2;
-            text-align: center;
-        }
-
-        .business h2 {
-            font-family: Georgia, serif;
-            color: #111;
-            font-size: 34px;
+        .section-label {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            font-weight: 700;
             margin-bottom: 12px;
         }
 
-        .business p {
-            color: #666;
-            max-width: 700px;
-            margin: auto;
+        .contact-info h2,
+        .contact-form h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 44px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .contact-info > p {
+            color: var(--muted);
+            margin-bottom: 30px;
+            max-width: 520px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 18px;
+        }
+
+        .detail-box {
+            border: 1px solid var(--border);
+            padding: 22px 24px;
+            background: #fff;
+        }
+
+        .detail-box h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 21px;
+            margin-bottom: 5px;
+        }
+
+        .detail-box p,
+        .detail-box a {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .detail-box a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+        }
+
+        .contact-form p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1px solid #dcdcdc;
+            background: #fff;
+            padding: 13px 14px;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .button {
+            display: inline-block;
+            border: 0;
+            background: var(--dark);
+            color: #fff;
+            padding: 14px 28px;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s ease;
+        }
+
+        .button:hover {
+            background: var(--accent);
+        }
+
+        .note {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #888;
         }
 
         footer {
-            background: #111;
+            background: #0c0c0c;
             color: #aaa;
-            text-align: center;
-            padding: 35px 20px;
+            padding: 45px 0 25px;
         }
 
-        footer p {
-            margin: 6px 0;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 35px;
         }
 
+        footer h3 {
+            color: #fff;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        footer p,
         footer a {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a:hover {
             color: #fff;
         }
 
-        @media (max-width: 800px) {
+        .footer-bottom {
+            border-top: 1px solid #292929;
+            padding-top: 20px;
+            font-size: 13px;
+            text-align: center;
+        }
 
+        @media (max-width: 850px) {
             .header-inner {
                 flex-direction: column;
                 padding: 20px 0;
             }
 
             nav {
-                flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px 20px;
             }
 
             .contact-grid {
                 grid-template-columns: 1fr;
+                gap: 45px;
             }
 
-            .hero h1 {
-                font-size: 43px;
+            .footer-grid {
+                grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 500px) {
-
-            .hero h1 {
-                font-size: 36px;
+        @media (max-width: 520px) {
+            .logo {
+                font-size: 28px;
             }
 
-            .contact-card,
-            .business {
-                padding: 28px;
+            .page-hero {
+                min-height: 330px;
+            }
+
+            .contact-section {
+                padding: 60px 0;
+            }
+
+            .contact-info h2,
+            .contact-form h2 {
+                font-size: 35px;
+            }
+
+            .contact-form {
+                padding: 25px;
             }
         }
     </style>
@@ -218,114 +365,222 @@
 
 <body>
 
-<header>
-    <div class="container header-inner">
-
-        <a href="index.html" class="logo">
-            Fashion <span>QD</span>
-        </a>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="fashion.html">Fashion</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="categories.html">Categories</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
+    <div class="top-bar">
+        Fashion, Beauty & Style Inspiration — Discover Your Personal Style
     </div>
-</header>
 
-<section class="hero">
+    <header>
+        <div class="container header-inner">
 
-    <span>Get in Touch</span>
+            <a href="index.html" class="logo">
+                Fashion <span>QD</span>
+            </a>
 
-    <h1>Contact Fashion QD</h1>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="fashion.html">Fashion</a>
+                <a href="beauty.html">Beauty</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-    <p>
-        Have a question, partnership idea or business inquiry?
-        Our team is available to hear from you.
-    </p>
+        </div>
+    </header>
 
-</section>
+    <main>
 
-<main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-content">
 
-<section class="contact-section">
+                    <div class="eyebrow">
+                        Fashion QD
+                    </div>
 
-    <div class="container">
+                    <h1>Contact Us</h1>
 
-        <div class="contact-grid">
+                    <p>
+                        Have a question, partnership idea or collaboration
+                        opportunity? We would love to hear from you.
+                    </p>
 
-            <div class="contact-card">
+                </div>
+            </div>
+        </section>
 
-                <h2>Email Us</h2>
+        <section class="contact-section">
 
-                <p>
-                    For general inquiries, partnerships, collaborations
-                    and business opportunities, contact us by email.
-                </p>
+            <div class="container">
 
-                <a
-                    class="contact-link"
-                    href="mailto:brandseocompany@gmail.com"
-                >
-                    brandseocompany@gmail.com
-                </a>
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <div class="section-label">
+                            Get In Touch
+                        </div>
+
+                        <h2>
+                            We'd Love to Hear From You
+                        </h2>
+
+                        <p>
+                            For general inquiries, partnerships, collaborations,
+                            advertising opportunities and content-related
+                            questions, please contact the Fashion QD team.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <div class="detail-box">
+                                <h3>Email</h3>
+                                <a href="mailto:brandseocompany@gmail.com">
+                                    brandseocompany@gmail.com
+                                </a>
+                            </div>
+
+                            <div class="detail-box">
+                                <h3>Phone</h3>
+                                <a href="tel:+923269547318">
+                                    +92 326 9547318
+                                </a>
+                            </div>
+
+                            <div class="detail-box">
+                                <h3>Website</h3>
+                                <a href="https://fashion.qd.je/">
+                                    fashion.qd.je
+                                </a>
+                            </div>
+
+                            <div class="detail-box">
+                                <h3>Business Inquiries</h3>
+                                <p>
+                                    Partnerships, collaborations and
+                                    professional inquiries are welcome.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-form">
+
+                        <div class="section-label">
+                            Send a Message
+                        </div>
+
+                        <h2>Get in Touch</h2>
+
+                        <p>
+                            Complete the form below and your email application
+                            will open with the information you provide.
+                        </p>
+
+                        <form action="mailto:brandseocompany@gmail.com" method="post" enctype="text/plain">
+
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="Name"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="Subject"
+                                    placeholder="Enter subject"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="Message"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="button">
+                                Send Message
+                            </button>
+
+                        </form>
+
+                        <div class="note">
+                            Your default email application will be used to send
+                            the message.
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="contact-card">
+        </section>
 
-                <h2>Call Us</h2>
+    </main>
 
-                <p>
-                    You can contact our team directly by phone for
-                    business and partnership inquiries.
-                </p>
+    <footer>
 
-                <a
-                    class="contact-link"
-                    href="tel:+923269547318"
-                >
-                    +92 326 9547318
-                </a>
+        <div class="container">
 
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Fashion QD</h3>
+                    <p>
+                        Fashion, beauty and lifestyle inspiration for
+                        modern everyday living.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+                    <p><a href="fashion.html">Fashion</a></p>
+                    <p><a href="beauty.html">Beauty</a></p>
+                    <p><a href="categories.html">Categories</a></p>
+                </div>
+
+                <div>
+                    <h3>Information</h3>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Fashion QD. All rights reserved.
             </div>
 
         </div>
 
-        <div class="business">
-
-            <h2>Business & Partnerships</h2>
-
-            <p>
-                Fashion brands, agencies, creators and businesses interested
-                in partnerships, collaborations or content opportunities
-                are welcome to contact the Fashion QD team.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-
-    <p>© 2026 Fashion QD. All rights reserved.</p>
-
-    <p>
-        <a href="index.html">Home</a> |
-        <a href="about.html">About</a> |
-        <a href="categories.html">Categories</a> |
-        <a href="contact.html">Contact</a>
-    </p>
-
-</footer>
+    </footer>
 
 </body>
 </html>
