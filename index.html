@@ -2,25 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fashion QD | Fashion, Beauty & Style Inspiration</title>
+    <title>Fashion Trends, Beauty & Style Inspiration | Fashion QD</title>
 
-    <meta name="description" content="Fashion QD brings you fashion trends, style inspiration, beauty ideas, outfit guides and lifestyle content for modern readers.">
+    <meta name="description" content="Discover the latest fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD. Explore practical ideas for modern everyday style.">
 
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <link rel="canonical" href="https://fashion.qd.je/">
 
-    <meta property="og:title" content="Fashion QD | Fashion, Beauty & Style Inspiration">
-    <meta property="og:description" content="Discover fashion trends, beauty inspiration, style guides and lifestyle ideas at Fashion QD.">
+    <meta name="theme-color" content="#111111">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fashion Trends, Beauty & Style Inspiration | Fashion QD">
+    <meta property="og:description" content="Discover the latest fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fashion QD">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85">
+    <meta property="og:image:alt" content="Fashion trends and style inspiration">
 
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fashion Trends, Beauty & Style Inspiration | Fashion QD">
+    <meta name="twitter:description" content="Discover fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85">
+
+    <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- WebSite Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fashion QD",
+      "url": "https://fashion.qd.je/",
+      "description": "Fashion, beauty and style inspiration for modern readers.",
+      "inLanguage": "en"
+    }
+    </script>
 
     <style>
         :root {
@@ -40,6 +67,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "DM Sans", Arial, sans-serif;
             color: var(--text);
@@ -50,6 +81,11 @@
         a {
             text-decoration: none;
             color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         .container {
@@ -222,6 +258,10 @@
             margin: 9px 0;
         }
 
+        .card h3 a:hover {
+            color: var(--accent);
+        }
+
         .card p {
             color: var(--muted);
             font-size: 15px;
@@ -362,17 +402,17 @@
 <header>
     <div class="container header-inner">
 
-        <a href="index.html" class="logo">
+        <a href="/" class="logo" aria-label="Fashion QD Home">
             Fashion <span>QD</span>
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="fashion.html">Fashion</a>
-            <a href="beauty.html">Beauty</a>
-            <a href="categories.html">Categories</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav aria-label="Main navigation">
+            <a href="/">Home</a>
+            <a href="/fashion.html">Fashion</a>
+            <a href="/beauty.html">Beauty</a>
+            <a href="/categories.html">Categories</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
         </nav>
 
     </div>
@@ -391,8 +431,7 @@
             </div>
 
             <h1>
-                Discover Your Style.
-                Define Your Look.
+                Fashion Trends, Beauty & Style Inspiration
             </h1>
 
             <p>
@@ -400,7 +439,7 @@
                 beauty inspiration and lifestyle content created for modern readers.
             </p>
 
-            <a href="fashion.html" class="button">
+            <a href="/fashion.html" class="button">
                 Explore Fashion
             </a>
 
@@ -411,7 +450,7 @@
 </section>
 
 
-<section>
+<section aria-labelledby="featured-heading">
 
     <div class="container">
 
@@ -419,7 +458,7 @@
 
             <span>Featured</span>
 
-            <h2>
+            <h2 id="featured-heading">
                 Latest Fashion Inspiration
             </h2>
 
@@ -438,6 +477,9 @@
                 <img
                     src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
                     alt="Modern fashion outfit inspiration"
+                    width="900"
+                    height="600"
+                    fetchpriority="high"
                 >
 
                 <div class="card-content">
@@ -447,7 +489,9 @@
                     </span>
 
                     <h3>
-                        Modern Fashion Trends to Watch
+                        <a href="/fashion.html">
+                            Modern Fashion Trends to Watch
+                        </a>
                     </h3>
 
                     <p>
@@ -465,6 +509,8 @@
                 <img
                     src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=85"
                     alt="Elegant women's fashion style"
+                    width="900"
+                    height="600"
                     loading="lazy"
                 >
 
@@ -475,7 +521,9 @@
                     </span>
 
                     <h3>
-                        Simple Ways to Improve Your Style
+                        <a href="/fashion.html">
+                            Simple Ways to Improve Your Style
+                        </a>
                     </h3>
 
                     <p>
@@ -493,6 +541,8 @@
                 <img
                     src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
                     alt="Contemporary street fashion"
+                    width="900"
+                    height="600"
                     loading="lazy"
                 >
 
@@ -503,7 +553,9 @@
                     </span>
 
                     <h3>
-                        Everyday Style Inspiration
+                        <a href="/fashion.html">
+                            Everyday Style Inspiration
+                        </a>
                     </h3>
 
                     <p>
@@ -522,7 +574,7 @@
 </section>
 
 
-<section class="about">
+<section class="about" aria-labelledby="about-heading">
 
     <div class="container about-grid">
 
@@ -530,7 +582,9 @@
 
             <img
                 src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=85"
-                alt="Fashion clothing store"
+                alt="Fashion clothing store and style inspiration"
+                width="1200"
+                height="800"
                 loading="lazy"
             >
 
@@ -543,7 +597,7 @@
                 About Fashion QD
             </span>
 
-            <h2>
+            <h2 id="about-heading">
                 Fashion Inspiration for Modern Life
             </h2>
 
@@ -558,7 +612,7 @@
                 your personal style simple and enjoyable.
             </p>
 
-            <a href="about.html" class="button">
+            <a href="/about.html" class="button">
                 Learn More About Us
             </a>
 
@@ -569,11 +623,11 @@
 </section>
 
 
-<section class="cta">
+<section class="cta" aria-labelledby="cta-heading">
 
     <div class="container">
 
-        <h2>
+        <h2 id="cta-heading">
             Stay Inspired
         </h2>
 
@@ -581,7 +635,7 @@
             Explore fashion, beauty and lifestyle inspiration from Fashion QD.
         </p>
 
-        <a href="contact.html" class="button">
+        <a href="/contact.html" class="button">
             Contact Us
         </a>
 
@@ -619,15 +673,15 @@
                 </h3>
 
                 <p>
-                    <a href="fashion.html">Fashion</a>
+                    <a href="/fashion.html">Fashion</a>
                 </p>
 
                 <p>
-                    <a href="beauty.html">Beauty</a>
+                    <a href="/beauty.html">Beauty</a>
                 </p>
 
                 <p>
-                    <a href="categories.html">Categories</a>
+                    <a href="/categories.html">Categories</a>
                 </p>
 
             </div>
@@ -640,11 +694,11 @@
                 </h3>
 
                 <p>
-                    <a href="about.html">About Us</a>
+                    <a href="/about.html">About Us</a>
                 </p>
 
                 <p>
-                    <a href="contact.html">Contact</a>
+                    <a href="/contact.html">Contact</a>
                 </p>
 
             </div>
