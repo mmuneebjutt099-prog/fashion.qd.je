@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion Trends & Style Ideas | Fashion QD</title>
+
+    <meta name="description" content="Explore the latest fashion trends, outfit ideas, styling tips and timeless fashion inspiration from Fashion QD.">
+
+    <link rel="canonical" href="https://fashion.qd.je/fashion.html">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fashion Trends & Style Ideas | Fashion QD">
+    <meta property="og:description" content="Discover fashion trends, outfit ideas and practical styling inspiration.">
+    <meta property="og:url" content="https://fashion.qd.je/fashion.html">
+    <meta property="og:site_name" content="Fashion QD">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --dark: #111111;
+            --text: #333333;
+            --muted: #707070;
+            --light: #f7f7f7;
+            --white: #ffffff;
+            --border: #e8e8e8;
+            --accent: #b48a64;
+            --max-width: 1180px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: auto;
+        }
+
+        .top-bar {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            background: #fff;
+        }
+
+        .header-inner {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            gap: 26px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .page-hero {
+            background:
+                linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+                url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+            min-height: 470px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-content {
+            max-width: 720px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(45px, 6vw, 72px);
+            line-height: 1.05;
+            margin-bottom: 22px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #eeeeee;
+            max-width: 650px;
+        }
+
+        section {
+            padding: 85px 0;
+        }
+
+        .heading {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .heading span {
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .heading h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: clamp(34px, 4vw, 48px);
+            line-height: 1.15;
+            margin: 10px 0 14px;
+        }
+
+        .heading p {
+            color: var(--muted);
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .article {
+            border: 1px solid var(--border);
+            background: #fff;
+        }
+
+        .article img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .category {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .article h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 25px;
+            line-height: 1.25;
+            margin: 9px 0 12px;
+        }
+
+        .article p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .guide {
+            background: var(--light);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .guide-image {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+        }
+
+        .guide h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 45px;
+            line-height: 1.15;
+            margin: 12px 0 20px;
+        }
+
+        .guide p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .tips {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .tip {
+            border: 1px solid var(--border);
+            padding: 25px;
+        }
+
+        .tip h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .tip p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        footer {
+            background: #0c0c0c;
+            color: #aaa;
+            padding: 45px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 35px;
+        }
+
+        footer h3 {
+            color: #fff;
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        footer p,
+        footer a {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #292929;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 850px) {
+            .header-inner {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .articles,
+            .guide-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tips {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .page-hero {
+                min-height: 420px;
+            }
+
+            .guide-image {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        Fashion, Beauty & Style Inspiration — Fashion QD
+    </div>
+
+    <header>
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">
+                Fashion <span>QD</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="fashion.html">Fashion</a>
+                <a href="beauty.html">Beauty</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        Fashion QD
+                    </div>
+
+                    <h1>
+                        Fashion Trends & Style Inspiration
+                    </h1>
+
+                    <p>
+                        Discover modern fashion trends, outfit ideas,
+                        styling tips and timeless inspiration to help
+                        you build a confident personal style.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+
+            <div class="container">
+
+                <div class="heading">
+                    <span>Latest Fashion</span>
+
+                    <h2>
+                        Explore Modern Style
+                    </h2>
+
+                    <p>
+                        Stay updated with fashion inspiration, wardrobe ideas
+                        and practical styling advice for everyday life.
+                    </p>
+                </div>
+
+                <div class="articles">
+
+                    <article class="article">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
+                            alt="Modern fashion outfit"
+                        >
+
+                        <div class="article-content">
+
+                            <span class="category">
+                                Fashion Trends
+                            </span>
+
+                            <h3>
+                                Modern Fashion Trends to Watch
+                            </h3>
+
+                            <p>
+                                Discover fresh fashion trends and learn how
+                                to bring modern looks into your wardrobe.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="article">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                            alt="Women's fashion style"
+                        >
+
+                        <div class="article-content">
+
+                            <span class="category">
+                                Style Guide
+                            </span>
+
+                            <h3>
+                                Easy Ways to Improve Your Style
+                            </h3>
+
+                            <p>
+                                Simple styling ideas that can help you create
+                                versatile and confident everyday outfits.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="article">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+                            alt="Contemporary street fashion"
+                        >
+
+                        <div class="article-content">
+
+                            <span class="category">
+                                Inspiration
+                            </span>
+
+                            <h3>
+                                Everyday Outfit Inspiration
+                            </h3>
+
+                            <p>
+                                Find outfit inspiration for different seasons,
+                                occasions and personal fashion preferences.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="guide">
+
+            <div class="container guide-grid">
+
+                <div>
+
+                    <img
+                        class="guide-image"
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+                        alt="Fashion clothing and wardrobe"
+                    >
+
+                </div>
+
+                <div>
+
+                    <span class="category">
+                        Personal Style
+                    </span>
+
+                    <h2>
+                        Build a Wardrobe That Works for You
+                    </h2>
+
+                    <p>
+                        Great fashion is not only about following trends.
+                        It is also about understanding your personal style
+                        and choosing pieces that work together.
+                    </p>
+
+                    <p>
+                        Focus on versatile clothing, comfortable essentials
+                        and pieces that can be styled in different ways.
+                    </p>
+
+                    <p>
+                        The goal is to create outfits that feel natural,
+                        confident and practical for your everyday life.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <div class="container">
+
+                <div class="heading">
+                    <span>Style Advice</span>
+
+                    <h2>
+                        Practical Fashion Tips
+                    </h2>
+
+                    <p>
+                        Simple ideas to make everyday styling easier.
+                    </p>
+                </div>
+
+                <div class="tips">
+
+                    <div class="tip">
+
+                        <h3>
+                            Choose Versatile Pieces
+                        </h3>
+
+                        <p>
+                            Invest in clothing that can be combined with
+                            different outfits and accessories.
+                        </p>
+
+                    </div>
+
+                    <div class="tip">
+
+                        <h3>
+                            Understand Your Colors
+                        </h3>
+
+                        <p>
+                            Experiment with colors that complement your
+                            wardrobe and personal style.
+                        </p>
+
+                    </div>
+
+                    <div class="tip">
+
+                        <h3>
+                            Focus on Fit
+                        </h3>
+
+                        <p>
+                            Well-fitting clothing can make even simple
+                            outfits look polished and refined.
+                        </p>
+
+                    </div>
+
+                    <div class="tip">
+
+                        <h3>
+                            Add Personal Details
+                        </h3>
+
+                        <p>
+                            Accessories and small styling choices can give
+                            a basic outfit a unique personality.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Fashion QD</h3>
+
+                    <p>
+                        Fashion, beauty and lifestyle inspiration for
+                        modern everyday living.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="index.html">Home</a>
+                    </p>
+
+                    <p>
+                        <a href="fashion.html">Fashion</a>
+                    </p>
+
+                    <p>
+                        <a href="beauty.html">Beauty</a>
+                    </p>
+
+                </div>
+
+                <div>
+                    <h3>Information</h3>
+
+                    <p>
+                        <a href="about.html">About Us</a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">Contact</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © 2026 Fashion QD. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
