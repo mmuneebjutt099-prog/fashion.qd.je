@@ -6,10 +6,6 @@
   </url>
 
   <url>
-    <loc>https://fashion.qd.je/about.html</loc>
-  </url>
-
-  <url>
     <loc>https://fashion.qd.je/fashion.html</loc>
   </url>
 
@@ -22,7 +18,25 @@
   </url>
 
   <url>
+    <loc>https://fashion.qd.je/about.html</loc>
+  </url>
+
+  <url>
     <loc>https://fashion.qd.je/contact.html</loc>
+  </url>
+
+  <!-- Articles -->
+
+  <url>
+    <loc>https://fashion.qd.je/articles/modern-fashion-trends.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fashion.qd.je/articles/simple-ways-to-improve-your-style.html</loc>
+  </url>
+
+  <url>
+    <loc>https://fashion.qd.je/articles/everyday-style-inspiration.html</loc>
   </url>
 
 </urlset>
