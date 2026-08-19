@@ -8,20 +8,87 @@
 
     <meta name="description" content="Explore the latest fashion trends, outfit ideas, styling tips and timeless fashion inspiration from Fashion QD.">
 
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
     <link rel="canonical" href="https://fashion.qd.je/fashion.html">
 
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#111111">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Fashion Trends & Style Ideas | Fashion QD">
-    <meta property="og:description" content="Discover fashion trends, outfit ideas and practical styling inspiration.">
+    <meta property="og:description" content="Discover fashion trends, outfit ideas and practical styling inspiration from Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/fashion.html">
     <meta property="og:site_name" content="Fashion QD">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85">
+    <meta property="og:image:alt" content="Fashion trends and style inspiration">
 
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fashion Trends & Style Ideas | Fashion QD">
+    <meta name="twitter:description" content="Discover fashion trends, outfit ideas and practical styling inspiration from Fashion QD.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85">
+
+    <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fashion QD",
+      "url": "https://fashion.qd.je/",
+      "description": "Fashion, beauty and style inspiration for modern readers.",
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fashion Trends & Style Ideas | Fashion QD",
+      "url": "https://fashion.qd.je/fashion.html",
+      "description": "Explore the latest fashion trends, outfit ideas, styling tips and timeless fashion inspiration from Fashion QD.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Fashion QD",
+        "url": "https://fashion.qd.je/"
+      },
+      "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fashion.qd.je/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fashion",
+          "item": "https://fashion.qd.je/fashion.html"
+        }
+      ]
+    }
+    </script>
 
     <style>
         :root {
@@ -41,6 +108,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "DM Sans", Arial, sans-serif;
             color: var(--text);
@@ -51,6 +122,11 @@
         a {
             color: inherit;
             text-decoration: none;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
         }
 
         .container {
@@ -98,6 +174,7 @@
         nav a {
             font-size: 14px;
             font-weight: 600;
+            padding: 10px 6px;
         }
 
         nav a:hover {
@@ -109,6 +186,7 @@
                 linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
                 url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=85")
                 center/cover no-repeat;
+
             min-height: 470px;
             display: flex;
             align-items: center;
@@ -212,12 +290,15 @@
             margin: 9px 0 12px;
         }
 
+        .article h3 a:hover {
+            color: var(--accent);
+        }
+
         .article p {
             color: var(--muted);
             font-size: 15px;
         }
 
-        /* Read Article Button */
         .read-more {
             display: inline-block;
             margin-top: 18px;
@@ -286,6 +367,29 @@
         .tip p {
             color: var(--muted);
             font-size: 15px;
+        }
+
+        .related {
+            background: #fff;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .related-link {
+            border: 1px solid var(--border);
+            padding: 12px 18px;
+            font-weight: 600;
+        }
+
+        .related-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
         }
 
         footer {
@@ -364,9 +468,17 @@
             .guide-image {
                 height: 350px;
             }
+
+            .hero-content p {
+                font-size: 16px;
+            }
         }
     </style>
+
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+
 </head>
 
 <body>
@@ -378,23 +490,45 @@
     <header>
         <div class="container header-inner">
 
-            <a href="index.html" class="logo">
+            <a href="/" class="logo" aria-label="Fashion QD Home">
                 Fashion <span>QD</span>
             </a>
 
             <nav aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="fashion.html">Fashion</a>
-                <a href="beauty.html">Beauty</a>
-                <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="/" aria-label="Fashion QD Home">
+                    Home
+                </a>
+
+                <a href="/fashion.html" aria-current="page">
+                    Fashion
+                </a>
+
+                <a href="/beauty.html">
+                    Beauty
+                </a>
+
+                <a href="/categories.html">
+                    Categories
+                </a>
+
+                <a href="/about.html">
+                    About
+                </a>
+
+                <a href="/contact.html">
+                    Contact
+                </a>
+
             </nav>
 
         </div>
     </header>
 
+
     <main>
+
+        <!-- HERO -->
 
         <section class="page-hero">
 
@@ -423,7 +557,9 @@
         </section>
 
 
-        <section>
+        <!-- ARTICLES -->
+
+        <section aria-labelledby="latest-fashion">
 
             <div class="container">
 
@@ -431,7 +567,7 @@
 
                     <span>Latest Fashion</span>
 
-                    <h2>
+                    <h2 id="latest-fashion">
                         Explore Modern Style
                     </h2>
 
@@ -450,10 +586,17 @@
 
                     <article class="article">
 
-                        <img
-                            src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
-                            alt="Modern fashion outfit"
-                        >
+                        <a href="/articles/summer-fashion-trends.html">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85"
+                                alt="Modern fashion outfit inspiration"
+                                width="900"
+                                height="600"
+                                loading="lazy"
+                            >
+
+                        </a>
 
                         <div class="article-content">
 
@@ -462,7 +605,9 @@
                             </span>
 
                             <h3>
-                                Modern Fashion Trends to Watch
+                                <a href="/articles/summer-fashion-trends.html">
+                                    Modern Fashion Trends to Watch
+                                </a>
                             </h3>
 
                             <p>
@@ -471,10 +616,10 @@
                             </p>
 
                             <a
-                                href="articles/summer-fashion-trends.html"
+                                href="/articles/summer-fashion-trends.html"
                                 class="read-more"
                             >
-                                Read Article →
+                                Read Modern Fashion Trends →
                             </a>
 
                         </div>
@@ -486,10 +631,17 @@
 
                     <article class="article">
 
-                        <img
-                            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
-                            alt="Women's fashion style"
-                        >
+                        <a href="/articles/simple-ways-to-improve-your-style.html">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                                alt="Women's fashion style and outfit ideas"
+                                width="900"
+                                height="600"
+                                loading="lazy"
+                            >
+
+                        </a>
 
                         <div class="article-content">
 
@@ -498,13 +650,22 @@
                             </span>
 
                             <h3>
-                                Easy Ways to Improve Your Style
+                                <a href="/articles/simple-ways-to-improve-your-style.html">
+                                    Easy Ways to Improve Your Style
+                                </a>
                             </h3>
 
                             <p>
                                 Simple styling ideas that can help you create
                                 versatile and confident everyday outfits.
                             </p>
+
+                            <a
+                                href="/articles/simple-ways-to-improve-your-style.html"
+                                class="read-more"
+                            >
+                                Read Style Guide →
+                            </a>
 
                         </div>
 
@@ -515,25 +676,41 @@
 
                     <article class="article">
 
-                        <img
-                            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
-                            alt="Contemporary street fashion"
-                        >
+                        <a href="/articles/everyday-style-inspiration.html">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+                                alt="Contemporary street fashion inspiration"
+                                width="900"
+                                height="600"
+                                loading="lazy"
+                            >
+
+                        </a>
 
                         <div class="article-content">
 
                             <span class="category">
-                                Inspiration
+                                Style Inspiration
                             </span>
 
                             <h3>
-                                Everyday Outfit Inspiration
+                                <a href="/articles/everyday-style-inspiration.html">
+                                    Everyday Outfit Inspiration
+                                </a>
                             </h3>
 
                             <p>
                                 Find outfit inspiration for different seasons,
                                 occasions and personal fashion preferences.
                             </p>
+
+                            <a
+                                href="/articles/everyday-style-inspiration.html"
+                                class="read-more"
+                            >
+                                Read Outfit Inspiration →
+                            </a>
 
                         </div>
 
@@ -546,7 +723,9 @@
         </section>
 
 
-        <section class="guide">
+        <!-- PERSONAL STYLE GUIDE -->
+
+        <section class="guide" aria-labelledby="style-guide">
 
             <div class="container guide-grid">
 
@@ -555,7 +734,10 @@
                     <img
                         class="guide-image"
                         src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
-                        alt="Fashion clothing and wardrobe"
+                        alt="Fashion clothing and wardrobe inspiration"
+                        width="1200"
+                        height="800"
+                        loading="lazy"
                     >
 
                 </div>
@@ -566,7 +748,7 @@
                         Personal Style
                     </span>
 
-                    <h2>
+                    <h2 id="style-guide">
                         Build a Wardrobe That Works for You
                     </h2>
 
@@ -586,6 +768,14 @@
                         confident and practical for your everyday life.
                     </p>
 
+                    <p>
+                        Explore our
+                        <a href="/categories.html">
+                            fashion categories
+                        </a>
+                        to discover more style inspiration.
+                    </p>
+
                 </div>
 
             </div>
@@ -593,7 +783,9 @@
         </section>
 
 
-        <section>
+        <!-- STYLE TIPS -->
+
+        <section aria-labelledby="fashion-tips">
 
             <div class="container">
 
@@ -601,7 +793,7 @@
 
                     <span>Style Advice</span>
 
-                    <h2>
+                    <h2 id="fashion-tips">
                         Practical Fashion Tips
                     </h2>
 
@@ -675,6 +867,51 @@
 
         </section>
 
+
+        <!-- RELATED CONTENT -->
+
+        <section class="related" aria-labelledby="related-content">
+
+            <div class="container">
+
+                <div class="heading">
+
+                    <span>Explore More</span>
+
+                    <h2 id="related-content">
+                        Fashion QD
+                    </h2>
+
+                    <p>
+                        Explore more fashion, beauty and lifestyle content.
+                    </p>
+
+                </div>
+
+                <div class="related-links">
+
+                    <a href="/beauty.html" class="related-link">
+                        Beauty & Skincare
+                    </a>
+
+                    <a href="/categories.html" class="related-link">
+                        All Categories
+                    </a>
+
+                    <a href="/about.html" class="related-link">
+                        About Fashion QD
+                    </a>
+
+                    <a href="/contact.html" class="related-link">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
 
@@ -705,15 +942,27 @@
                     </h3>
 
                     <p>
-                        <a href="index.html">Home</a>
+                        <a href="/">
+                            Home
+                        </a>
                     </p>
 
                     <p>
-                        <a href="fashion.html">Fashion</a>
+                        <a href="/fashion.html">
+                            Fashion
+                        </a>
                     </p>
 
                     <p>
-                        <a href="beauty.html">Beauty</a>
+                        <a href="/beauty.html">
+                            Beauty
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="/categories.html">
+                            Categories
+                        </a>
                     </p>
 
                 </div>
@@ -726,11 +975,15 @@
                     </h3>
 
                     <p>
-                        <a href="about.html">About Us</a>
+                        <a href="/about.html">
+                            About Us
+                        </a>
                     </p>
 
                     <p>
-                        <a href="contact.html">Contact</a>
+                        <a href="/contact.html">
+                            Contact
+                        </a>
                     </p>
 
                 </div>
@@ -739,7 +992,9 @@
 
 
             <div class="footer-bottom">
+
                 © 2026 Fashion QD. All rights reserved.
+
             </div>
 
         </div>
@@ -747,4 +1002,4 @@
     </footer>
 
 </body>
-                        </html>
+</html>
