@@ -1,29 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Beauty Tips, Skincare & Lifestyle | Fashion QD</title>
+    <title>Beauty Tips, Skincare & Makeup Ideas | Fashion QD</title>
 
-    <meta name="description" content="Discover beauty tips, skincare ideas, makeup inspiration and practical lifestyle advice from Fashion QD.">
+    <meta name="description" content="Explore practical beauty tips, skincare ideas, makeup inspiration and everyday beauty advice from Fashion QD. Discover simple routines, style inspiration and useful beauty content.">
 
-    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <link rel="canonical" href="https://fashion.qd.je/beauty.html">
 
+    <meta name="theme-color" content="#111111">
+
+    <!-- Open Graph -->
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Beauty Tips, Skincare & Lifestyle | Fashion QD">
-    <meta property="og:description" content="Explore beauty inspiration, skincare ideas, makeup tips and lifestyle content from Fashion QD.">
+    <meta property="og:title" content="Beauty Tips, Skincare & Makeup Ideas | Fashion QD">
+    <meta property="og:description" content="Explore practical beauty tips, skincare ideas, makeup inspiration and everyday beauty advice from Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/beauty.html">
     <meta property="og:site_name" content="Fashion QD">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1800&q=85">
+    <meta property="og:image:alt" content="Beauty products and skincare inspiration">
+
+    <!-- Twitter / X -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beauty Tips, Skincare & Makeup Ideas | Fashion QD">
+    <meta name="twitter:description" content="Explore practical beauty tips, skincare ideas, makeup inspiration and everyday beauty advice from Fashion QD.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1800&q=85">
+
+    <!-- Performance -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
+
+    <!-- WebSite Schema -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fashion QD",
+      "url": "https://fashion.qd.je/",
+      "description": "Fashion, beauty and style inspiration for modern readers.",
+      "inLanguage": "en"
+    }
+    </script>
+
+
+    <!-- Breadcrumb Schema -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://fashion.qd.je/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Beauty",
+          "item": "https://fashion.qd.je/beauty.html"
+        }
+      ]
+    }
+    </script>
+
+
     <style>
+
         :root {
             --dark: #111111;
             --text: #333333;
@@ -35,15 +94,18 @@
             --max-width: 1180px;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", Arial, sans-serif;
@@ -52,15 +114,24 @@
             line-height: 1.7;
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
         .container {
             width: min(92%, var(--max-width));
             margin: auto;
         }
+
 
         .top-bar {
             background: var(--dark);
@@ -71,10 +142,12 @@
             letter-spacing: .3px;
         }
 
+
         header {
             background: #fff;
             border-bottom: 1px solid var(--border);
         }
+
 
         .header-inner {
             min-height: 82px;
@@ -84,6 +157,7 @@
             gap: 30px;
         }
 
+
         .logo {
             font-family: "Playfair Display", Georgia, serif;
             font-size: 32px;
@@ -91,9 +165,11 @@
             color: var(--dark);
         }
 
+
         .logo span {
             color: var(--accent);
         }
+
 
         nav {
             display: flex;
@@ -102,29 +178,35 @@
             flex-wrap: wrap;
         }
 
+
         nav a {
             font-size: 14px;
             font-weight: 600;
         }
 
+
         nav a:hover {
             color: var(--accent);
         }
 
+
         .hero {
-            min-height: 480px;
+            min-height: 500px;
             display: flex;
             align-items: center;
             color: #fff;
+
             background:
-                linear-gradient(rgba(0,0,0,.52), rgba(0,0,0,.52)),
+                linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
                 url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1800&q=85")
                 center/cover no-repeat;
         }
 
+
         .hero-content {
-            max-width: 720px;
+            max-width: 740px;
         }
+
 
         .eyebrow {
             text-transform: uppercase;
@@ -134,6 +216,7 @@
             margin-bottom: 18px;
         }
 
+
         .hero h1 {
             font-family: "Playfair Display", Georgia, serif;
             font-size: clamp(45px, 6vw, 72px);
@@ -141,20 +224,24 @@
             margin-bottom: 22px;
         }
 
+
         .hero p {
-            max-width: 650px;
+            max-width: 680px;
             font-size: 18px;
             color: #eeeeee;
         }
+
 
         section {
             padding: 85px 0;
         }
 
+
         .heading {
-            max-width: 720px;
+            max-width: 750px;
             margin-bottom: 45px;
         }
+
 
         .heading span,
         .category {
@@ -165,6 +252,7 @@
             letter-spacing: 2px;
         }
 
+
         .heading h2 {
             font-family: "Playfair Display", Georgia, serif;
             color: var(--dark);
@@ -173,9 +261,11 @@
             margin: 10px 0 14px;
         }
 
+
         .heading p {
             color: var(--muted);
         }
+
 
         .cards {
             display: grid;
@@ -183,11 +273,20 @@
             gap: 28px;
         }
 
+
         .card {
             border: 1px solid var(--border);
             background: #fff;
             overflow: hidden;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
+
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.08);
+        }
+
 
         .card img {
             width: 100%;
@@ -195,9 +294,11 @@
             object-fit: cover;
         }
 
+
         .card-content {
             padding: 25px;
         }
+
 
         .card h3 {
             font-family: "Playfair Display", Georgia, serif;
@@ -207,14 +308,33 @@
             margin: 9px 0 12px;
         }
 
+
         .card p {
             color: var(--muted);
             font-size: 15px;
         }
 
+
+        .card-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dark);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 3px;
+        }
+
+
+        .card-link:hover {
+            color: var(--accent);
+        }
+
+
         .feature {
             background: var(--light);
         }
+
 
         .feature-grid {
             display: grid;
@@ -223,11 +343,13 @@
             align-items: center;
         }
 
+
         .feature-image {
             width: 100%;
             height: 500px;
             object-fit: cover;
         }
+
 
         .feature h2 {
             font-family: "Playfair Display", Georgia, serif;
@@ -237,10 +359,27 @@
             margin: 12px 0 20px;
         }
 
+
         .feature p {
             color: var(--muted);
             margin-bottom: 16px;
         }
+
+
+        .text-link {
+            display: inline-block;
+            margin-top: 8px;
+            font-weight: 700;
+            color: var(--dark);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 3px;
+        }
+
+
+        .text-link:hover {
+            color: var(--accent);
+        }
+
 
         .tips {
             display: grid;
@@ -248,10 +387,13 @@
             gap: 20px;
         }
 
+
         .tip {
             padding: 28px;
             border: 1px solid var(--border);
+            background: #fff;
         }
+
 
         .tip h3 {
             font-family: "Playfair Display", Georgia, serif;
@@ -260,10 +402,61 @@
             margin-bottom: 9px;
         }
 
+
         .tip p {
             color: var(--muted);
             font-size: 15px;
         }
+
+
+        .explore {
+            background: #fff;
+        }
+
+
+        .explore-box {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        .explore-box h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+
+        .explore-box p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+
+        .explore-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+
+        .explore-links a {
+            border: 1px solid var(--border);
+            padding: 12px 20px;
+            font-weight: 600;
+            background: #fff;
+        }
+
+
+        .explore-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
 
         .cta {
             background: var(--dark);
@@ -271,11 +464,13 @@
             text-align: center;
         }
 
+
         .cta h2 {
             font-family: "Playfair Display", Georgia, serif;
             font-size: 44px;
             margin-bottom: 12px;
         }
+
 
         .cta p {
             color: #cccccc;
@@ -283,11 +478,13 @@
             margin: auto;
         }
 
+
         footer {
             background: #0c0c0c;
             color: #aaa;
             padding: 45px 0 25px;
         }
+
 
         .footer-grid {
             display: grid;
@@ -296,6 +493,7 @@
             margin-bottom: 35px;
         }
 
+
         footer h3 {
             color: #fff;
             font-family: "Playfair Display", Georgia, serif;
@@ -303,15 +501,18 @@
             margin-bottom: 12px;
         }
 
+
         footer p,
         footer a {
             color: #aaa;
             font-size: 14px;
         }
 
+
         footer a:hover {
             color: #fff;
         }
+
 
         .footer-bottom {
             border-top: 1px solid #292929;
@@ -320,15 +521,19 @@
             font-size: 13px;
         }
 
+
         @media (max-width: 850px) {
+
             .header-inner {
                 flex-direction: column;
                 padding: 20px 0;
             }
 
+
             nav {
                 justify-content: center;
             }
+
 
             .cards,
             .feature-grid,
@@ -336,408 +541,595 @@
                 grid-template-columns: 1fr;
             }
 
+
             .tips {
                 grid-template-columns: 1fr;
             }
 
+
             .feature-image {
                 height: 380px;
             }
+
         }
 
+
         @media (max-width: 520px) {
+
             section {
                 padding: 60px 0;
             }
+
 
             .logo {
                 font-size: 28px;
             }
 
+
             .hero {
-                min-height: 420px;
+                min-height: 430px;
             }
+
 
             .hero h1 {
                 font-size: 43px;
             }
 
+
             .hero p {
                 font-size: 16px;
             }
+
 
             .feature-image {
                 height: 320px;
             }
 
+
             .cta h2 {
                 font-size: 35px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <div class="top-bar">
-        Fashion, Beauty & Style Inspiration — Fashion QD
+
+<div class="top-bar">
+    Fashion, Beauty & Style Inspiration — Fashion QD
+</div>
+
+
+<header>
+
+    <div class="container header-inner">
+
+        <a href="/" class="logo" aria-label="Fashion QD Home">
+            Fashion <span>QD</span>
+        </a>
+
+
+        <nav aria-label="Main navigation">
+
+            <a href="/" >Home</a>
+
+            <a href="/fashion.html">Fashion</a>
+
+            <a href="/beauty.html" aria-current="page">Beauty</a>
+
+            <a href="/categories.html">Categories</a>
+
+            <a href="/about.html">About</a>
+
+            <a href="/contact.html">Contact</a>
+
+        </nav>
+
     </div>
 
-    <header>
-        <div class="container header-inner">
+</header>
 
-            <a href="index.html" class="logo">
-                Fashion <span>QD</span>
-            </a>
 
-            <nav aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="fashion.html">Fashion</a>
-                <a href="beauty.html">Beauty</a>
-                <a href="categories.html">Categories</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+<main>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Beauty • Skincare • Makeup • Lifestyle
+            </div>
+
+
+            <h1>
+                Beauty Inspiration for Everyday Life
+            </h1>
+
+
+            <p>
+                Explore practical beauty ideas, skincare inspiration,
+                makeup tips and simple lifestyle advice designed for
+                modern everyday routines.
+            </p>
 
         </div>
-    </header>
 
-    <main>
+    </div>
 
-        <section class="hero">
+</section>
 
-            <div class="container">
 
-                <div class="hero-content">
+<section aria-labelledby="beauty-heading">
 
-                    <div class="eyebrow">
-                        Beauty • Skincare • Lifestyle
-                    </div>
+    <div class="container">
 
-                    <h1>
-                        Beauty Inspiration for Everyday Life
-                    </h1>
+        <div class="heading">
 
-                    <p>
-                        Explore practical beauty ideas, skincare inspiration,
-                        makeup tips and simple lifestyle advice designed for
-                        modern everyday routines.
-                    </p>
+            <span>Beauty Inspiration</span>
 
-                </div>
 
-            </div>
+            <h2 id="beauty-heading">
+                Discover Beauty Ideas & Everyday Inspiration
+            </h2>
 
-        </section>
 
-        <section>
+            <p>
+                Explore simple and practical beauty ideas covering
+                skincare, makeup and everyday beauty essentials.
+                Discover inspiration that can fit naturally into
+                your personal routine.
+            </p>
 
-            <div class="container">
+        </div>
 
-                <div class="heading">
 
-                    <span>Beauty Inspiration</span>
+        <div class="cards">
 
-                    <h2>
-                        Discover Your Beauty Routine
-                    </h2>
 
-                    <p>
-                        Explore simple and practical beauty ideas that can
-                        help you build a routine that works for you.
-                    </p>
+            <article class="card">
 
-                </div>
+                <img
+                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85"
+                    alt="Skincare products and beauty routine"
+                    loading="lazy"
+                >
 
-                <div class="cards">
 
-                    <article class="card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=85"
-                            alt="Skincare products and beauty routine"
-                        >
-
-                        <div class="card-content">
-
-                            <span class="category">
-                                Skincare
-                            </span>
-
-                            <h3>
-                                Simple Skincare Ideas
-                            </h3>
-
-                            <p>
-                                Discover practical skincare habits and
-                                inspiration for creating a consistent
-                                everyday routine.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85"
-                            alt="Makeup and beauty inspiration"
-                        >
-
-                        <div class="card-content">
-
-                            <span class="category">
-                                Makeup
-                            </span>
-
-                            <h3>
-                                Everyday Makeup Inspiration
-                            </h3>
-
-                            <p>
-                                Explore simple makeup ideas and techniques
-                                for polished everyday looks.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="card">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85"
-                            alt="Beauty products and cosmetics"
-                        >
-
-                        <div class="card-content">
-
-                            <span class="category">
-                                Beauty
-                            </span>
-
-                            <h3>
-                                Modern Beauty Essentials
-                            </h3>
-
-                            <p>
-                                Learn about everyday beauty essentials and
-                                simple ways to organize your routine.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="feature">
-
-            <div class="container feature-grid">
-
-                <div>
-
-                    <img
-                        class="feature-image"
-                        src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85"
-                        alt="Relaxing skincare and beauty routine"
-                    >
-
-                </div>
-
-                <div>
+                <div class="card-content">
 
                     <span class="category">
-                        Everyday Beauty
+                        Skincare
                     </span>
 
-                    <h2>
-                        Build a Routine That Fits Your Lifestyle
-                    </h2>
+
+                    <h3>
+                        Simple Skincare Ideas
+                    </h3>
+
 
                     <p>
-                        A good beauty routine does not need to be complicated.
-                        The most useful routine is one that is simple enough
-                        to follow consistently.
-                    </p>
-
-                    <p>
-                        Start with the basics and focus on habits that fit
-                        your personal needs, schedule and lifestyle.
-                    </p>
-
-                    <p>
-                        Fashion QD shares beauty inspiration designed to make
-                        everyday routines easier and more enjoyable.
+                        Discover practical skincare habits and
+                        inspiration for creating a consistent
+                        everyday routine.
                     </p>
 
                 </div>
 
-            </div>
+            </article>
 
-        </section>
 
-        <section>
+            <article class="card">
 
-            <div class="container">
+                <img
+                    src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85"
+                    alt="Makeup products and everyday beauty inspiration"
+                    loading="lazy"
+                >
 
-                <div class="heading">
 
-                    <span>Beauty Advice</span>
+                <div class="card-content">
 
-                    <h2>
-                        Practical Beauty Tips
-                    </h2>
+                    <span class="category">
+                        Makeup
+                    </span>
+
+
+                    <h3>
+                        Everyday Makeup Inspiration
+                    </h3>
+
 
                     <p>
-                        Simple ideas to make your everyday beauty routine
-                        more organized and enjoyable.
+                        Explore simple makeup ideas and techniques
+                        for polished everyday looks and personal
+                        beauty inspiration.
                     </p>
 
                 </div>
 
-                <div class="tips">
+            </article>
 
-                    <div class="tip">
 
-                        <h3>
-                            Keep Your Routine Simple
-                        </h3>
+            <article class="card">
 
-                        <p>
-                            A simple routine is easier to maintain consistently
-                            and can help you stay organized.
-                        </p>
+                <img
+                    src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85"
+                    alt="Beauty products and cosmetics"
+                    loading="lazy"
+                >
 
-                    </div>
 
-                    <div class="tip">
+                <div class="card-content">
 
-                        <h3>
-                            Take Care of Your Skin
-                        </h3>
+                    <span class="category">
+                        Beauty
+                    </span>
 
-                        <p>
-                            Build everyday habits around gentle skincare,
-                            hydration and regular self-care.
-                        </p>
 
-                    </div>
+                    <h3>
+                        Modern Beauty Essentials
+                    </h3>
 
-                    <div class="tip">
 
-                        <h3>
-                            Choose Products Carefully
-                        </h3>
-
-                        <p>
-                            Learn about products and ingredients before adding
-                            something new to your beauty routine.
-                        </p>
-
-                    </div>
-
-                    <div class="tip">
-
-                        <h3>
-                            Make Time for Yourself
-                        </h3>
-
-                        <p>
-                            Beauty can also be about self-care, relaxation
-                            and taking time to feel confident.
-                        </p>
-
-                    </div>
+                    <p>
+                        Learn about everyday beauty essentials and
+                        simple ways to organize a practical beauty
+                        routine.
+                    </p>
 
                 </div>
 
-            </div>
+            </article>
 
-        </section>
 
-        <section class="cta">
+        </div>
 
-            <div class="container">
+    </div>
 
-                <h2>
-                    Stay Inspired
-                </h2>
+</section>
+
+
+<section class="feature" aria-labelledby="routine-heading">
+
+    <div class="container feature-grid">
+
+
+        <div>
+
+            <img
+                class="feature-image"
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85"
+                alt="Relaxing skincare and beauty routine"
+                loading="lazy"
+            >
+
+        </div>
+
+
+        <div>
+
+            <span class="category">
+                Everyday Beauty
+            </span>
+
+
+            <h2 id="routine-heading">
+                Build a Beauty Routine That Fits Your Lifestyle
+            </h2>
+
+
+            <p>
+                A good beauty routine does not need to be complicated.
+                The most useful routine is one that is simple enough
+                to follow consistently.
+            </p>
+
+
+            <p>
+                Start with the basics and focus on habits that fit
+                your personal needs, schedule and lifestyle.
+            </p>
+
+
+            <p>
+                Fashion QD shares beauty inspiration designed to make
+                everyday routines easier and more enjoyable.
+            </p>
+
+
+            <a
+                href="/categories.html"
+                class="text-link"
+            >
+                Explore All Categories
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section aria-labelledby="tips-heading">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>Beauty Advice</span>
+
+
+            <h2 id="tips-heading">
+                Practical Beauty Tips
+            </h2>
+
+
+            <p>
+                Simple ideas to make your everyday beauty routine
+                more organized, practical and enjoyable.
+            </p>
+
+        </div>
+
+
+        <div class="tips">
+
+
+            <article class="tip">
+
+                <h3>
+                    Keep Your Routine Simple
+                </h3>
 
                 <p>
-                    Explore more fashion, beauty and lifestyle inspiration
-                    from Fashion QD.
+                    A simple routine is easier to maintain consistently
+                    and can help you stay organized.
+                </p>
+
+            </article>
+
+
+            <article class="tip">
+
+                <h3>
+                    Take Care of Your Skin
+                </h3>
+
+                <p>
+                    Build everyday habits around gentle skincare,
+                    hydration and regular self-care.
+                </p>
+
+            </article>
+
+
+            <article class="tip">
+
+                <h3>
+                    Choose Products Carefully
+                </h3>
+
+                <p>
+                    Learn about products and ingredients before adding
+                    something new to your beauty routine.
+                </p>
+
+            </article>
+
+
+            <article class="tip">
+
+                <h3>
+                    Make Time for Yourself
+                </h3>
+
+                <p>
+                    Beauty can also be about self-care, relaxation
+                    and taking time to feel confident.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="explore" aria-labelledby="explore-heading">
+
+    <div class="container">
+
+        <div class="explore-box">
+
+            <span class="category">
+                Explore Fashion QD
+            </span>
+
+
+            <h2 id="explore-heading">
+                Discover More Inspiration
+            </h2>
+
+
+            <p>
+                Explore Fashion QD's fashion, beauty and lifestyle
+                content and discover more ideas for your personal style.
+            </p>
+
+
+            <div class="explore-links">
+
+                <a href="/fashion.html">
+                    Explore Fashion
+                </a>
+
+
+                <a href="/categories.html">
+                    Browse Categories
+                </a>
+
+
+                <a href="/articles/summer-fashion-trends.html">
+                    Summer Fashion Trends
+                </a>
+
+
+                <a href="/about.html">
+                    About Fashion QD
+                </a>
+
+
+                <a href="/contact.html">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Stay Inspired
+        </h2>
+
+
+        <p>
+            Explore more fashion, beauty and lifestyle inspiration
+            from Fashion QD.
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    Fashion QD
+                </h3>
+
+
+                <p>
+                    Fashion, beauty and lifestyle inspiration for
+                    modern everyday living.
                 </p>
 
             </div>
 
-        </section>
 
-    </main>
+            <div>
 
-    <footer>
+                <h3>
+                    Explore
+                </h3>
 
-        <div class="container">
 
-            <div class="footer-grid">
+                <p>
+                    <a href="/">
+                        Home
+                    </a>
+                </p>
 
-                <div>
 
-                    <h3>Fashion QD</h3>
+                <p>
+                    <a href="/fashion.html">
+                        Fashion
+                    </a>
+                </p>
 
-                    <p>
-                        Fashion, beauty and lifestyle inspiration for
-                        modern everyday living.
-                    </p>
 
-                </div>
+                <p>
+                    <a href="/beauty.html">
+                        Beauty
+                    </a>
+                </p>
 
-                <div>
 
-                    <h3>Explore</h3>
-
-                    <p>
-                        <a href="index.html">Home</a>
-                    </p>
-
-                    <p>
-                        <a href="fashion.html">Fashion</a>
-                    </p>
-
-                    <p>
-                        <a href="beauty.html">Beauty</a>
-                    </p>
-
-                </div>
-
-                <div>
-
-                    <h3>Information</h3>
-
-                    <p>
-                        <a href="about.html">About Us</a>
-                    </p>
-
-                    <p>
-                        <a href="contact.html">Contact</a>
-                    </p>
-
-                </div>
+                <p>
+                    <a href="/categories.html">
+                        Categories
+                    </a>
+                </p>
 
             </div>
 
-            <div class="footer-bottom">
-                © 2026 Fashion QD. All rights reserved.
+
+            <div>
+
+                <h3>
+                    Information
+                </h3>
+
+
+                <p>
+                    <a href="/about.html">
+                        About Us
+                    </a>
+                </p>
+
+
+                <p>
+                    <a href="/contact.html">
+                        Contact
+                    </a>
+                </p>
+
+
+                <p>
+                    <a href="/articles/summer-fashion-trends.html">
+                        Latest Article
+                    </a>
+                </p>
+
             </div>
+
 
         </div>
 
-    </footer>
+
+        <div class="footer-bottom">
+
+            © 2026 Fashion QD. All rights reserved.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
