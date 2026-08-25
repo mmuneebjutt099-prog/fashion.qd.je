@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Trends, Beauty & Style Inspiration | Fashion QD</title>
+
+    <title>Fashion Trends, Beauty &amp; Style Inspiration | Fashion QD</title>
+
     <meta name="description" content="Discover the latest fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD. Explore practical ideas for modern everyday style.">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
     <link rel="canonical" href="https://fashion.qd.je/">
+
     <meta name="theme-color" content="#111111">
 
-    <meta property="og:title" content="Fashion Trends, Beauty & Style Inspiration | Fashion QD">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fashion Trends, Beauty &amp; Style Inspiration | Fashion QD">
     <meta property="og:description" content="Discover the latest fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/">
     <meta property="og:type" content="website">
@@ -18,19 +23,25 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=70">
     <meta property="og:image:alt" content="Fashion trends and style inspiration">
 
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fashion Trends, Beauty & Style Inspiration | Fashion QD">
+    <meta name="twitter:title" content="Fashion Trends, Beauty &amp; Style Inspiration | Fashion QD">
     <meta name="twitter:description" content="Discover fashion trends, outfit ideas, beauty tips and style inspiration.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=70">
 
+    <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="preload" as="image" href="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=75" fetchpriority="high">
+
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     </noscript>
 
+    <!-- WebSite Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,26 +56,25 @@
 
     <style>
         /* =========================================================
-           FASHION QD — CINEMATIC EDITORIAL SYSTEM
+           FASHION QD — CINEMATIC DESIGN & ANIMATION SYSTEM
         ========================================================= */
 
         :root {
             --black: #101010;
             --black-soft: #171717;
             --text: #292929;
-            --muted: #777777;
+            --muted: #777;
             --cream: #f7f4ef;
             --white: #ffffff;
-            --border: rgba(17,17,17,0.08);
-            --border-light: rgba(255,255,255,0.12);
+            --border: rgba(17,17,17,.10);
             --gold: #b18a63;
             --gold-light: #d2b28f;
-            --max: 1200px;
+            --max: 1180px;
             --ease: cubic-bezier(.22,.61,.36,1);
             --ease-cinematic: cubic-bezier(.16,1,.3,1);
         }
 
-        /* RESET & BASE */
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
@@ -95,14 +105,10 @@
         img {
             display: block;
             max-width: 100%;
-            height: auto;
         }
 
         button {
             font: inherit;
-            border: none;
-            background: none;
-            cursor: pointer;
         }
 
         .container {
@@ -110,11 +116,11 @@
             margin: auto;
         }
 
-        /* CURSOR GLOW */
+        /* CURSOR GLOW (DESKTOP) */
         .cursor-glow {
             position: fixed;
-            width: 260px;
-            height: 260px;
+            width: 320px;
+            height: 320px;
             border-radius: 50%;
             background: radial-gradient(
                 circle,
@@ -126,8 +132,12 @@
             z-index: 9999;
             transform: translate(-50%, -50%);
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity .4s ease;
             mix-blend-mode: multiply;
+        }
+
+        @media (max-width: 991px) {
+            .cursor-glow { display: none; }
         }
 
         /* SCROLL PROGRESS */
@@ -135,16 +145,19 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 0%;
             height: 3px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
-            transform-origin: left;
-            transform: scaleX(0);
+            background: linear-gradient(
+                90deg,
+                var(--gold),
+                var(--gold-light),
+                var(--gold)
+            );
             z-index: 10001;
-            will-change: transform;
+            transition: width 0.1s ease-out;
         }
 
-        /* CINEMATIC PAGE LOADER */
+        /* CINEMATIC PAGE INTRO LOADER */
         .page-loader {
             position: fixed;
             inset: 0;
@@ -154,13 +167,18 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            pointer-events: auto;
         }
 
         .loader-bg {
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(177,138,99,.15), transparent 45%);
-            animation: loaderAtmosphere 3s ease-in-out infinite alternate;
+            background: radial-gradient(
+                circle at 50% 50%,
+                rgba(177,138,99,.18),
+                transparent 45%
+            );
+            animation: loaderAtmosphere 2.5s ease-in-out infinite alternate;
         }
 
         .loader-inner {
@@ -175,52 +193,67 @@
             text-transform: uppercase;
             letter-spacing: 5px;
             font-size: 10px;
-            color: rgba(255,255,255,.55);
+            color: rgba(255,255,255,.6);
             opacity: 0;
-            transform: translateY(20px);
-            animation: loaderUp 0.8s var(--ease-cinematic) 0.15s forwards;
+            transform: translateY(15px);
+            animation: loaderUp .6s var(--ease-cinematic) .1s forwards;
         }
 
         .loader-brand {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(42px, 7vw, 76px);
+            font-size: clamp(38px, 6vw, 68px);
             line-height: 1;
-            margin-top: 12px;
+            margin-top: 10px;
             opacity: 0;
-            transform: translateY(50px);
-            animation: loaderUp 1s var(--ease-cinematic) 0.3s forwards;
+            transform: translateY(30px);
+            animation: loaderUp .7s var(--ease-cinematic) .2s forwards;
         }
 
         .loader-brand span {
             color: var(--gold-light);
-            font-style: italic;
         }
 
         .loader-line {
             width: 0;
             height: 1px;
-            margin: 22px auto 0;
+            margin: 20px auto 0;
             background: var(--gold);
-            animation: loaderLine 1s var(--ease-cinematic) 0.55s forwards;
+            animation: loaderLine .8s var(--ease-cinematic) .4s forwards;
         }
 
         .page-loader.exit {
-            animation: loaderExit 1.1s var(--ease-cinematic) forwards;
+            animation: loaderExit 0.8s var(--ease-cinematic) forwards;
+            pointer-events: none;
         }
 
         @keyframes loaderUp {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         @keyframes loaderLine {
-            to { width: 110px; }
+            to {
+                width: 100px;
+            }
         }
+
         @keyframes loaderAtmosphere {
             from { transform: scale(1); }
             to { transform: scale(1.2); }
         }
+
         @keyframes loaderExit {
-            0% { opacity: 1; clip-path: inset(0 0 0 0); }
-            100% { opacity: 0; visibility: hidden; clip-path: inset(0 0 100% 0); }
+            0% {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+            100% {
+                opacity: 0;
+                visibility: hidden;
+                clip-path: inset(0 0 100% 0);
+            }
         }
 
         /* TOP BAR */
@@ -236,7 +269,7 @@
             z-index: 100;
         }
 
-        /* HEADER & NAVIGATION */
+        /* HEADER */
         header {
             background: rgba(255,255,255,.94);
             backdrop-filter: blur(12px);
@@ -245,12 +278,12 @@
             position: sticky;
             top: 0;
             z-index: 90;
-            transition: background 0.4s ease, box-shadow 0.4s ease;
+            transition: background .4s ease, box-shadow .4s ease;
         }
 
         header.scrolled {
             background: rgba(255,255,255,.98);
-            box-shadow: 0 12px 35px rgba(0,0,0,.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
         }
 
         .header-inner {
@@ -267,16 +300,17 @@
             font-weight: 700;
             letter-spacing: -.5px;
             opacity: 0;
-            transform: translateY(-20px);
+            transform: translateY(-15px);
+            transition: opacity .8s var(--ease-cinematic), transform .8s var(--ease-cinematic);
         }
 
         body.loaded .logo {
-            animation: headerReveal 0.9s var(--ease-cinematic) 0.15s forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .logo span {
             color: var(--gold);
-            font-style: italic;
         }
 
         nav {
@@ -291,19 +325,21 @@
             font-weight: 600;
             padding: 10px 4px;
             opacity: 0;
-            transform: translateY(-16px);
+            transform: translateY(-12px);
+            transition: opacity .6s var(--ease-cinematic), transform .6s var(--ease-cinematic), color .3s ease;
         }
 
         body.loaded nav a {
-            animation: navReveal 0.65s var(--ease-cinematic) forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        body.loaded nav a:nth-child(1) { animation-delay: .25s; }
-        body.loaded nav a:nth-child(2) { animation-delay: .32s; }
-        body.loaded nav a:nth-child(3) { animation-delay: .39s; }
-        body.loaded nav a:nth-child(4) { animation-delay: .46s; }
-        body.loaded nav a:nth-child(5) { animation-delay: .53s; }
-        body.loaded nav a:nth-child(6) { animation-delay: .60s; }
+        body.loaded nav a:nth-child(1) { transition-delay: .10s; }
+        body.loaded nav a:nth-child(2) { transition-delay: .16s; }
+        body.loaded nav a:nth-child(3) { transition-delay: .22s; }
+        body.loaded nav a:nth-child(4) { transition-delay: .28s; }
+        body.loaded nav a:nth-child(5) { transition-delay: .34s; }
+        body.loaded nav a:nth-child(6) { transition-delay: .40s; }
 
         nav a::before {
             content: "";
@@ -315,7 +351,7 @@
             background: var(--gold);
             transform: scaleX(0);
             transform-origin: right;
-            transition: transform 0.45s var(--ease);
+            transition: transform .4s var(--ease);
         }
 
         nav a:hover {
@@ -327,17 +363,10 @@
             transform-origin: left;
         }
 
-        @keyframes headerReveal {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes navReveal {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         /* HERO SECTION */
         .hero {
             min-height: calc(100vh - 120px);
-            min-height: 700px;
+            min-height: 650px;
             position: relative;
             display: flex;
             align-items: center;
@@ -349,19 +378,20 @@
 
         .hero-media {
             position: absolute;
-            inset: -7%;
+            inset: -5%;
             z-index: -3;
-            background: linear-gradient(
+            background:
+                linear-gradient(
                     90deg,
-                    rgba(0,0,0,.78) 0%,
-                    rgba(0,0,0,.48) 42%,
-                    rgba(0,0,0,.15) 100%
+                    rgba(0,0,0,.75) 0%,
+                    rgba(0,0,0,.45) 50%,
+                    rgba(0,0,0,.25) 100%
                 ),
                 url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=78")
                 center/cover no-repeat;
-            transform: scale(1.08);
+            transform: scale(1.05);
+            animation: heroZoom 20s var(--ease) infinite alternate;
             will-change: transform;
-            animation: heroZoom 18s var(--ease) infinite alternate;
         }
 
         .hero-overlay {
@@ -369,8 +399,16 @@
             inset: 0;
             z-index: -2;
             background:
-                radial-gradient(circle at 72% 35%, rgba(255,255,255,.10), transparent 25%),
-                linear-gradient(120deg, rgba(177,138,99,.13), transparent 35%);
+                radial-gradient(
+                    circle at 70% 40%,
+                    rgba(255,255,255,.08),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    120deg,
+                    rgba(177,138,99,.15),
+                    transparent 40%
+                );
             animation: heroAtmosphere 12s ease-in-out infinite alternate;
         }
 
@@ -378,41 +416,20 @@
             position: absolute;
             top: -30%;
             left: -25%;
-            width: 55%;
+            width: 50%;
             height: 160%;
             z-index: -1;
             background: linear-gradient(
                 105deg,
                 transparent 0%,
-                rgba(255,255,255,.025) 45%,
-                rgba(255,255,255,.13) 50%,
-                rgba(255,255,255,.025) 55%,
+                rgba(255,255,255,.02) 40%,
+                rgba(255,255,255,.10) 50%,
+                rgba(255,255,255,.02) 60%,
                 transparent 100%
             );
             transform: rotate(12deg) translateX(-120%);
-            animation: lightSweep 9s var(--ease) 3s infinite;
+            animation: lightSweep 10s var(--ease) 2s infinite;
         }
-
-        .hero-lines {
-            position: absolute;
-            inset: 0;
-            z-index: -1;
-            pointer-events: none;
-            opacity: .25;
-        }
-
-        .hero-lines::before,
-        .hero-lines::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, rgba(255,255,255,.18), transparent);
-        }
-
-        .hero-lines::before { left: 12%; }
-        .hero-lines::after { right: 12%; }
 
         .hero .container {
             position: relative;
@@ -421,7 +438,7 @@
 
         .hero-content {
             max-width: 760px;
-            padding: 70px 0;
+            padding: 80px 0;
         }
 
         .eyebrow {
@@ -432,48 +449,54 @@
             letter-spacing: 3px;
             font-size: 11px;
             font-weight: 700;
-            color: rgba(255,255,255,.78);
+            color: rgba(255,255,255,.8);
             opacity: 0;
-            transform: translateY(35px);
+            transform: translateY(25px);
+            transition: opacity .8s var(--ease-cinematic) .3s, transform .8s var(--ease-cinematic) .3s;
         }
 
         .eyebrow::before {
             content: "";
-            width: 38px;
+            width: 35px;
             height: 1px;
             background: var(--gold-light);
         }
 
         body.loaded .eyebrow {
-            animation: heroText 1s var(--ease-cinematic) 0.75s forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .hero h1 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(46px, 7vw, 88px);
-            line-height: .99;
-            letter-spacing: -2px;
-            margin: 24px 0 27px;
+            font-size: clamp(44px, 6.5vw, 84px);
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin: 22px 0 24px;
             max-width: 820px;
             opacity: 0;
-            transform: translateY(70px);
+            transform: translateY(35px);
+            transition: opacity 1s var(--ease-cinematic) .45s, transform 1s var(--ease-cinematic) .45s;
         }
 
         body.loaded .hero h1 {
-            animation: heroText 1.15s var(--ease-cinematic) 0.9s forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .hero p {
             max-width: 610px;
-            color: rgba(255,255,255,.78);
+            color: rgba(255,255,255,.8);
             font-size: 17px;
             margin-bottom: 34px;
             opacity: 0;
-            transform: translateY(35px);
+            transform: translateY(25px);
+            transition: opacity .9s var(--ease-cinematic) .6s, transform .9s var(--ease-cinematic) .6s;
         }
 
         body.loaded .hero p {
-            animation: heroText 1s var(--ease-cinematic) 1.45s forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .hero-actions {
@@ -481,11 +504,13 @@
             align-items: center;
             gap: 22px;
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
+            transition: opacity .8s var(--ease-cinematic) .75s, transform .8s var(--ease-cinematic) .75s;
         }
 
         body.loaded .hero-actions {
-            animation: heroText 1s var(--ease-cinematic) 1.65s forwards;
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .button {
@@ -493,7 +518,7 @@
             align-items: center;
             justify-content: center;
             min-height: 52px;
-            padding: 0 27px;
+            padding: 0 30px;
             background: var(--white);
             color: var(--black);
             font-size: 13px;
@@ -501,7 +526,8 @@
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,.25);
-            transition: transform 0.45s var(--ease), background 0.45s ease, color 0.45s ease, box-shadow 0.45s ease;
+            transition: transform .45s var(--ease), background .45s ease, color .45s ease, box-shadow .45s ease;
+            cursor: pointer;
         }
 
         .button span {
@@ -515,289 +541,187 @@
             inset: 0;
             background: var(--gold);
             transform: translateX(-102%);
-            transition: transform 0.55s var(--ease-cinematic);
+            transition: transform .5s var(--ease-cinematic);
         }
 
         .button:hover {
             color: var(--white);
-            transform: translateY(-4px);
-            box-shadow: 0 16px 35px rgba(0,0,0,.20);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 30px rgba(0,0,0,.18);
         }
 
         .button:hover::before {
             transform: translateX(0);
         }
 
-        .hero-scroll {
-            position: absolute;
-            right: 5%;
-            bottom: 38px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: rgba(255,255,255,.65);
-            font-size: 9px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            writing-mode: vertical-rl;
-            opacity: 0;
-        }
-
-        body.loaded .hero-scroll {
-            animation: fadeIn 1s ease 2.1s forwards;
-        }
-
-        .hero-scroll::after {
-            content: "";
-            width: 1px;
-            height: 65px;
-            background: linear-gradient(to bottom, var(--gold), transparent);
-            animation: scrollLine 2s ease-in-out infinite;
-        }
-
         @keyframes heroZoom {
-            0% { transform: scale(1.08); background-position: 50% 50%; }
-            100% { transform: scale(1.17); background-position: 54% 47%; }
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.14); }
         }
+
         @keyframes heroAtmosphere {
-            from { transform: scale(1) translate3d(-1%,0,0); }
-            to { transform: scale(1.12) translate3d(3%,2%,0); }
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
         }
+
         @keyframes lightSweep {
-            0%, 55% { transform: rotate(12deg) translateX(-120%); }
-            75%, 100% { transform: rotate(12deg) translateX(280%); }
-        }
-        @keyframes heroText {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-        @keyframes scrollLine {
-            0%, 100% { transform: scaleY(.65); transform-origin: top; opacity: .4; }
-            50% { transform: scaleY(1); transform-origin: top; opacity: 1; }
+            0%, 60% { transform: rotate(12deg) translateX(-120%); }
+            80%, 100% { transform: rotate(12deg) translateX(280%); }
         }
 
-        /* SECTION LAYOUTS */
-        section {
-            padding: 120px 0;
-            position: relative;
-        }
-
-        .heading {
-            max-width: 760px;
-            margin: 0 auto 60px;
+        /* SECTION INTRO HEADINGS */
+        .section-intro {
             text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
         }
 
-        .heading span {
-            display: inline-block;
-            color: var(--gold);
-            text-transform: uppercase;
+        .section-tag {
+            font-size: 11px;
             letter-spacing: 3px;
-            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--gold);
             font-weight: 700;
-            margin-bottom: 7px;
+            display: block;
+            margin-bottom: 8px;
         }
 
-        .heading h2 {
+        .section-intro h2 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(36px, 5vw, 57px);
-            line-height: 1.08;
-            letter-spacing: -1px;
+            font-size: clamp(28px, 4vw, 42px);
             color: var(--black);
-            margin: 7px 0 17px;
+            line-height: 1.2;
         }
 
-        .heading p {
-            color: var(--muted);
-            max-width: 620px;
-            margin: auto;
-        }
-
-        /* REVEAL ANIMATIONS */
-        .reveal {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: opacity 1.05s var(--ease-cinematic), transform 1.05s var(--ease-cinematic);
-            will-change: opacity, transform;
-        }
-
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-70px);
-            transition: opacity 1.15s var(--ease-cinematic), transform 1.15s var(--ease-cinematic);
-            will-change: opacity, transform;
-        }
-
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(70px);
-            transition: opacity 1.15s var(--ease-cinematic), transform 1.15s var(--ease-cinematic);
-            will-change: opacity, transform;
-        }
-
-        .visible {
-            opacity: 1;
-            transform: translate(0) !important;
-        }
-
-        /* FEATURED & CARDS GRID */
+        /* FEATURED ARTICLES SECTION */
         .featured-section {
-            background: var(--white);
-            overflow: hidden;
+            padding: 100px 0;
+            background: var(--cream);
+            position: relative;
         }
 
-        .cards {
+        .articles-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
         }
 
-        .card {
-            position: relative;
+        .article-card {
             background: var(--white);
+            border-radius: 2px;
+            overflow: hidden;
             border: 1px solid var(--border);
-            overflow: hidden;
-            opacity: 0;
-            transform: translateY(60px);
-            transition: opacity 1s var(--ease-cinematic), transform 1s var(--ease-cinematic), box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .3s ease;
         }
 
-        .card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,.08);
+            border-color: rgba(177,138,99,.3);
         }
 
-        .card:hover {
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-        }
-
-        .card::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gold);
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.65s var(--ease);
-        }
-
-        .card:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        .card-image {
+        .article-img-wrap {
             position: relative;
+            aspect-ratio: 16 / 10;
             overflow: hidden;
-            height: 320px;
-            background: #f0f0f0;
+            background: var(--black-soft);
         }
 
-        .card-image::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.2) 50%, transparent 80%);
-            transform: translateX(-120%);
-            transition: transform 1s var(--ease);
-        }
-
-        .card:hover .card-image::after {
-            transform: translateX(120%);
-        }
-
-        .card img {
+        .article-img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 1.1s var(--ease-cinematic), filter 0.7s ease;
+            transition: transform .8s var(--ease-cinematic);
             will-change: transform;
         }
 
-        .card:hover img {
+        .article-card:hover .article-img-wrap img {
             transform: scale(1.08);
-            filter: saturate(1.08) contrast(1.03);
         }
 
-        .card-content {
-            padding: 28px 26px 32px;
-        }
-
-        .category {
-            color: var(--gold);
+        .category-label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(16,16,16,.82);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: var(--white);
             font-size: 10px;
             font-weight: 700;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            padding: 5px 12px;
+            z-index: 2;
+            transition: background .3s ease, color .3s ease;
         }
 
-        .card h3 {
-            font-family: "Playfair Display", Georgia, serif;
-            color: var(--black);
-            font-size: 24px;
-            line-height: 1.25;
-            margin: 10px 0 12px;
-        }
-
-        .card h3 a {
-            transition: color 0.35s ease;
-        }
-
-        .card h3 a:hover {
-            color: var(--gold);
-        }
-
-        .card p {
-            color: var(--muted);
-            font-size: 14px;
-            line-height: 1.75;
-        }
-
-        .read-more,
-        .card-link {
-            display: inline-flex;
-            margin-top: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: .8px;
-            text-transform: uppercase;
-            position: relative;
-            padding-bottom: 5px;
-        }
-
-        .read-more::after,
-        .card-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 1px;
+        .article-card:hover .category-label {
             background: var(--gold);
-            transform: scaleX(.3);
-            transform-origin: left;
-            transition: transform 0.45s var(--ease);
+            color: var(--white);
         }
 
-        .read-more:hover,
-        .card-link:hover {
+        .article-content {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-content h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 20px;
+            line-height: 1.35;
+            color: var(--black);
+            margin-bottom: 12px;
+            transition: color .3s ease;
+        }
+
+        .article-card:hover .article-content h3 {
             color: var(--gold);
         }
 
-        .read-more:hover::after,
-        .card-link:hover::after {
-            transform: scaleX(1);
+        .article-content p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--black);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color .3s ease;
+        }
+
+        .read-more svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            transition: transform .4s var(--ease);
+        }
+
+        .article-card:hover .read-more {
+            color: var(--gold);
+        }
+
+        .article-card:hover .read-more svg {
+            transform: translateX(5px);
         }
 
         /* ABOUT SECTION */
         .about-section {
-            background: var(--cream);
-            overflow: hidden;
+            padding: 110px 0;
+            background: var(--white);
+            position: relative;
         }
 
         .about-grid {
@@ -807,80 +731,116 @@
             align-items: center;
         }
 
-        .about-image {
+        .about-img-wrap {
             position: relative;
             overflow: hidden;
             border-radius: 2px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.06);
+            aspect-ratio: 4 / 5;
+            background: var(--black-soft);
         }
 
-        .about-image img {
+        .about-img-wrap img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 1.2s var(--ease-cinematic);
+            transition: transform 1s var(--ease-cinematic);
         }
 
-        .about-image:hover img {
+        .about-img-wrap:hover img {
             transform: scale(1.05);
         }
 
-        .about-text h2 {
+        .about-content h2 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(32px, 4vw, 48px);
+            font-size: clamp(32px, 4vw, 46px);
             color: var(--black);
-            line-height: 1.15;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--muted);
             margin-bottom: 20px;
         }
 
-        .about-text p {
-            color: var(--muted);
-            font-size: 16px;
-            margin-bottom: 20px;
+        .about-content .button {
+            margin-top: 10px;
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+        }
+
+        .about-content .button::before {
+            background: var(--gold);
         }
 
         /* CTA SECTION */
         .cta-section {
+            padding: 100px 0;
             background: var(--black);
             color: var(--white);
             text-align: center;
             position: relative;
             overflow: hidden;
+            isolation: isolate;
         }
 
-        .cta-section::before {
-            content: "";
+        .cta-bg-glow {
             position: absolute;
-            inset: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(177,138,99,0.15), transparent 60%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(177,138,99,.18) 0%,
+                transparent 65%
+            );
+            pointer-events: none;
+            z-index: -1;
+            animation: loaderAtmosphere 6s ease-in-out infinite alternate;
         }
 
         .cta-content {
-            position: relative;
-            z-index: 2;
-            max-width: 680px;
-            margin: auto;
+            max-width: 650px;
+            margin: 0 auto;
         }
 
         .cta-content h2 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(36px, 5vw, 56px);
-            margin-bottom: 18px;
-            line-height: 1.1;
+            font-size: clamp(32px, 4.5vw, 48px);
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
 
         .cta-content p {
-            color: rgba(255,255,255,0.75);
             font-size: 16px;
-            margin-bottom: 32px;
+            color: rgba(255,255,255,.75);
+            margin-bottom: 35px;
+        }
+
+        .cta-content .button {
+            background: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+        }
+
+        .cta-content .button::before {
+            background: var(--white);
+        }
+
+        .cta-content .button:hover {
+            color: var(--black);
         }
 
         /* FOOTER */
         footer {
             background: var(--black-soft);
-            color: rgba(255,255,255,0.6);
-            padding: 80px 0 30px;
-            border-top: 1px solid var(--border-light);
+            color: rgba(255,255,255,.7);
+            padding: 70px 0 35px;
+            border-top: 1px solid rgba(255,255,255,.08);
             font-size: 13px;
         }
 
@@ -896,19 +856,20 @@
             opacity: 1;
             transform: none;
             margin-bottom: 16px;
-            display: block;
+            display: inline-block;
         }
 
         .footer-brand p {
-            max-width: 300px;
-            line-height: 1.7;
+            max-width: 320px;
+            font-size: 14px;
+            color: rgba(255,255,255,.55);
         }
 
         .footer-col h4 {
             color: var(--white);
-            font-size: 12px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
-            letter-spacing: 2px;
             margin-bottom: 20px;
         }
 
@@ -916,42 +877,94 @@
             list-style: none;
         }
 
-        .footer-col ul li {
-            margin-bottom: 10px;
+        .footer-col li {
+            margin-bottom: 12px;
         }
 
-        .footer-col ul a {
-            transition: color 0.3s ease;
+        .footer-col a {
+            transition: color .3s ease;
         }
 
-        .footer-col ul a:hover {
+        .footer-col a:hover {
             color: var(--gold-light);
         }
 
         .footer-bottom {
             padding-top: 30px;
-            border-top: 1px solid var(--border-light);
-            text-align: center;
+            border-top: 1px solid rgba(255,255,255,.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
             font-size: 12px;
+            color: rgba(255,255,255,.45);
         }
 
-        /* RESPONSIVE & MOBILE OPTIMIZATIONS */
-        @media (max-width: 992px) {
-            .cards { grid-template-columns: repeat(2, 1fr); }
-            .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
+        /* SCROLL REVEAL ANIMATIONS (Intersection Observer) */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity .8s var(--ease-cinematic), transform .8s var(--ease-cinematic);
+            will-change: opacity, transform;
         }
 
-        @media (max-width: 768px) {
-            .header-inner { min-height: 65px; }
-            nav { display: none; } /* Mobile nav fallback */
-            .cards { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .hero-scroll { display: none; }
-            section { padding: 80px 0; }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity .9s var(--ease-cinematic), transform .9s var(--ease-cinematic);
+            will-change: opacity, transform;
         }
 
-        /* ACCESSIBILITY & PREFERS-REDUCED-MOTION */
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity .9s var(--ease-cinematic), transform .9s var(--ease-cinematic);
+            will-change: opacity, transform;
+        }
+
+        .reveal-active {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        /* RESPONSIVE STYLES */
+        @media (max-width: 991px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header-inner {
+                min-height: 70px;
+            }
+            nav {
+                gap: 12px;
+            }
+            nav a {
+                font-size: 11px;
+                padding: 6px 2px;
+            }
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content {
+                padding: 50px 0;
+            }
+        }
+
+        /* REDUCED MOTION ACCESSIBILITY */
         @media (prefers-reduced-motion: reduce) {
             *, ::before, ::after {
                 animation-duration: 0.01ms !important;
@@ -959,7 +972,10 @@
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-            .reveal, .reveal-left, .reveal-right, .card {
+            .page-loader {
+                display: none !important;
+            }
+            .reveal-up, .reveal-left, .reveal-right {
                 opacity: 1 !important;
                 transform: none !important;
             }
@@ -968,237 +984,296 @@
 </head>
 <body class="loading">
 
-    <div class="cursor-glow" id="cursorGlow"></div>
-
+    <!-- Scroll Progress Indicator -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- Desktop Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Fast Cinematic Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-bg"></div>
         <div class="loader-inner">
-            <span class="loader-small">Editorial & Style</span>
+            <span class="loader-small">Fashion QD</span>
             <div class="loader-brand">Fashion <span>QD</span></div>
             <div class="loader-line"></div>
         </div>
     </div>
 
+    <!-- Top Announcement Bar -->
     <div class="topbar">
-        Curated Fashion, Beauty & Modern Style Insights
+        Discover Everyday Style, Trends &amp; Beauty Insights
     </div>
 
+    <!-- Header & Navigation -->
     <header id="mainHeader">
         <div class="container header-inner">
             <a href="https://fashion.qd.je/" class="logo">Fashion <span>QD</span></a>
             <nav>
                 <a href="https://fashion.qd.je/">Home</a>
-                <a href="#featured">Featured</a>
-                <a href="#latest">Latest</a>
+                <a href="#featured">Fashion</a>
+                <a href="#featured">Beauty</a>
+                <a href="#featured">Categories</a>
                 <a href="#about">About</a>
-                <a href="#cta">Newsletter</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Main Hero Section -->
+    <section class="hero" id="home">
         <div class="hero-media" id="heroMedia"></div>
         <div class="hero-overlay"></div>
         <div class="hero-light"></div>
-        <div class="hero-lines"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="eyebrow">Autumn / Winter Trends</div>
-                <h1>Defining Modern Modern Style</h1>
-                <p>Explore practical outfit ideas, elevated beauty tips, and seasonal editorial inspiration crafted for your daily wardrobe choices.</p>
+                <span class="eyebrow">Fashion • Beauty • Lifestyle</span>
+                <h1>Elevate Your Everyday Style &amp; Beauty Routine</h1>
+                <p>Explore curated fashion trends, practical outfit inspiration, and expert beauty advice designed for modern life.</p>
                 <div class="hero-actions">
-                    <a href="#featured" class="button"><span>Explore Trends</span></a>
+                    <a href="#featured" class="button"><span>Explore Fashion</span></a>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll">Scroll</div>
     </section>
 
+    <!-- Featured Articles Section -->
     <section class="featured-section" id="featured">
         <div class="container">
-            <div class="heading reveal">
-                <span>Curated Editorial</span>
-                <h2>Featured Style Guides</h2>
-                <p>Handpicked stories focusing on effortless elegance and contemporary fashion highlights.</p>
+            <div class="section-intro reveal-up">
+                <span class="section-tag">Latest Journal</span>
+                <h2>Featured Articles &amp; Trends</h2>
             </div>
-            <div class="cards">
-                <article class="card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=75" alt="Capsule Wardrobe Essentials" loading="lazy">
+            
+            <div class="articles-grid">
+                <!-- Article Card 1 -->
+                <article class="article-card reveal-up">
+                    <div class="article-img-wrap">
+                        <span class="category-label">Fashion Trends</span>
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=75" alt="Essential Spring Wardrobe Staples" loading="lazy">
                     </div>
-                    <div class="card-content">
-                        <span class="category">Wardrobe</span>
-                        <h3><a href="#">Building a Timeless Capsule Wardrobe</a></h3>
-                        <p>Discover key minimalist staples that mix and match effortlessly for any season or occasion.</p>
-                        <a href="#" class="read-more">Read Guide</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=75" alt="Autumn Fashion Trends" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <span class="category">Trends</span>
-                        <h3><a href="#">Seasonal Color Palettes & Textures</a></h3>
-                        <p>How to layer rich tones, wools, and tailored fits as temperature drops elegantly.</p>
-                        <a href="#" class="read-more">Read Guide</a>
+                    <div class="article-content">
+                        <h3>Essential Spring Wardrobe Staples for Modern Style</h3>
+                        <p>Build a versatile capsule wardrobe with timeless outerwear, clean tailoring, and effortless transitional pieces.</p>
+                        <a href="https://fashion.qd.je/" class="read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=75" alt="Streetwear Style Insights" loading="lazy">
+                <!-- Article Card 2 -->
+                <article class="article-card reveal-up">
+                    <div class="article-img-wrap">
+                        <span class="category-label">Style Guide</span>
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=75" alt="How to Style Oversized Blazers" loading="lazy">
                     </div>
-                    <div class="card-content">
-                        <span class="category">Streetwear</span>
-                        <h3><a href="#">Elevated Casual: Modern Streetwear</a></h3>
-                        <p>Blending comfortable everyday silhouettes with sleek high-fashion accents seamlessly.</p>
-                        <a href="#" class="read-more">Read Guide</a>
+                    <div class="article-content">
+                        <h3>How to Style Oversized Blazers for Any Occasion</h3>
+                        <p>Learn simple silhouette balancing techniques to wear relaxed tailoring from office hours to weekend events.</p>
+                        <a href="https://fashion.qd.je/" class="read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card reveal-up">
+                    <div class="article-img-wrap">
+                        <span class="category-label">Inspiration</span>
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=75" alt="Minimalist Accessories Guide" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3>Minimalist Accessories That Instantly Elevate Outfits</h3>
+                        <p>Small detail upgrades—from refined leather goods to delicate gold accents—that refine everyday looks.</p>
+                        <a href="https://fashion.qd.je/" class="read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card reveal-up">
+                    <div class="article-img-wrap">
+                        <span class="category-label">Fashion Style</span>
+                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=75" alt="Monochrome Styling Secrets" loading="lazy">
+                    </div>
+                    <div class="article-content">
+                        <h3>Monochrome Styling Secrets for a Sleek Aesthetic</h3>
+                        <p>Master tone-on-tone dressing through texture mixing and intentional layering for a polished image.</p>
+                        <a href="https://fashion.qd.je/" class="read-more">
+                            Read More
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image reveal-left">
-                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=75" alt="About Fashion QD" loading="lazy">
+                <div class="about-img-wrap reveal-left">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=75" alt="About Fashion QD editorial" loading="lazy">
                 </div>
-                <div class="about-text reveal-right">
-                    <span>Our Philosophy</span>
-                    <h2>Thoughtful Style for Daily Living</h2>
-                    <p>At Fashion QD, fashion is more than temporary trends. We believe in curated aesthetic clarity, intentional choices, and celebrating personal identity through authentic style choices.</p>
-                    <p>Our editorial features bring you practical, highly wearable fashion advice that bridges runway inspiration with your everyday lifestyle.</p>
-                    <a href="#cta" class="button" style="margin-top: 10px;"><span>Join Our Community</span></a>
+                <div class="about-content reveal-right">
+                    <span class="section-tag">Our Identity</span>
+                    <h2>About Fashion QD</h2>
+                    <p>Fashion QD is a modern editorial space created to make style approachable, thoughtful, and inspiring. We focus on real-world trends, versatile wardrobe concepts, and elevated aesthetic inspiration for everyday life.</p>
+                    <p>Whether you are refining your capsule wardrobe, exploring skincare fundamentals, or searching for new seasonal ideas, our curated content offers guidance tailored for practical elegance.</p>
+                    <a href="#featured" class="button"><span>Learn More</span></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" id="cta">
+    <!-- Call To Action Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-bg-glow"></div>
         <div class="container">
-            <div class="cta-content reveal">
-                <h2>Stay Ahead of the Curve</h2>
-                <p>Subscribe to receive curated weekly style reports, exclusive trend breakdowns, and beauty insights delivered straight to your inbox.</p>
-                <a href="#" class="button"><span>Subscribe Today</span></a>
+            <div class="cta-content reveal-up">
+                <span class="section-tag" style="color: var(--gold-light);">Get In Touch</span>
+                <h2>Connect With Fashion QD</h2>
+                <p>Have editorial questions, collaboration ideas, or general feedback? Reach out to our team today.</p>
+                <a href="mailto:contact@qd.je" class="button"><span>Contact Us</span></a>
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="https://fashion.qd.je/" class="logo">Fashion <span>QD</span></a>
-                    <p>Your premier destination for modern fashion trends, practical style guides, and daily aesthetic inspiration.</p>
+                    <p>Discover everyday fashion trends, outfit ideas, beauty insights, and style inspiration.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="https://fashion.qd.je/">Home</a></li>
-                        <li><a href="#featured">Featured</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#cta">Contact</a></li>
+                        <li><a href="#featured">Fashion</a></li>
+                        <li><a href="#featured">Beauty</a></li>
+                        <li><a href="#featured">Categories</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Categories</h4>
+                    <h4>About</h4>
                     <ul>
-                        <li><a href="#">Wardrobe Staples</a></li>
-                        <li><a href="#">Seasonal Trends</a></li>
-                        <li><a href="#">Beauty & Care</a></li>
-                        <li><a href="#">Street Style</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://fashion.qd.je/">Editorial Team</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Editorial Policy</a></li>
+                        <li><a href="https://fashion.qd.je/">Privacy Policy</a></li>
+                        <li><a href="https://fashion.qd.je/">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                &copy; 2026 Fashion QD. All rights reserved.
+                <p>&copy; 2026 Fashion QD. All rights reserved.</p>
+                <p>Designed for Modern Style &amp; Elegance.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Vanilla JavaScript for Performance & Animations -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.body;
             const loader = document.getElementById('pageLoader');
+            const scrollProgress = document.getElementById('scrollProgress');
             const header = document.getElementById('mainHeader');
-            const progressBar = document.getElementById('scrollProgress');
             const cursorGlow = document.getElementById('cursorGlow');
             const heroMedia = document.getElementById('heroMedia');
 
-            // 1. Page Entrance Exit Animation
+            /* FAST PAGE INTRO TIMING (Max ~1.1s) */
             setTimeout(() => {
-                if (loader) loader.classList.add('exit');
+                if (loader) {
+                    loader.classList.add('exit');
+                }
                 body.classList.remove('loading');
                 body.classList.add('loaded');
             }, 1000);
 
-            // 2. Cursor Glow Follow (Desktop Only)
-            if (window.innerWidth > 992 && cursorGlow) {
-                window.addEventListener('mousemove', (e) => {
-                    cursorGlow.style.opacity = '1';
-                    cursorGlow.style.left = `${e.clientX}px`;
-                    cursorGlow.style.top = `${e.clientY}px`;
-                });
-                document.addEventListener('mouseleave', () => {
-                    cursorGlow.style.opacity = '0';
-                });
-            }
-
-            // 3. Scroll Progress & Header Scroll State
+            /* SCROLL PROGRESS & HEADER STICKY TRANSLATION */
             window.addEventListener('scroll', () => {
                 const scrollTop = window.scrollY;
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                const scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
-
-                if (progressBar) {
-                    progressBar.style.transform = `scaleX(${scrollPercent})`;
+                
+                if (docHeight > 0) {
+                    const scrollPercent = (scrollTop / docHeight) * 100;
+                    scrollProgress.style.width = scrollPercent + '%';
                 }
 
-                if (header) {
-                    if (scrollTop > 50) {
-                        header.classList.add('scrolled');
-                    } else {
-                        header.classList.remove('scrolled');
-                    }
-                }
-
-                // Smooth Hero Parallax
-                if (heroMedia && scrollTop < window.innerHeight) {
-                    heroMedia.style.transform = `scale(1.08) translateY(${scrollTop * 0.25}px)`;
+                if (scrollTop > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
                 }
             }, { passive: true });
 
-            // 4. Scroll Reveal (IntersectionObserver)
+            /* CURSOR GLOW & SUBTLE PARALLAX (DESKTOP) */
+            if (window.innerWidth > 991 && cursorGlow) {
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursorGlow.style.opacity = '1';
+
+                    /* Subtle Hero Parallax */
+                    if (heroMedia && window.scrollY < window.innerHeight) {
+                        const moveX = (e.clientX - window.innerWidth / 2) * 0.015;
+                        const moveY = (e.clientY - window.innerHeight / 2) * 0.015;
+                        heroMedia.style.transform = `scale(1.08) translate3d(${moveX}px, ${moveY}px, 0)`;
+                    }
+                }, { passive: true });
+
+                function renderCursor() {
+                    currentX += (mouseX - currentX) * 0.15;
+                    currentY += (mouseY - currentY) * 0.15;
+                    cursorGlow.style.left = `${currentX}px`;
+                    cursorGlow.style.top = `${currentY}px`;
+                    requestAnimationFrame(renderCursor);
+                }
+                requestAnimationFrame(renderCursor);
+            }
+
+            /* INTERSECTION OBSERVER FOR SCROLL REVEALS */
             const observerOptions = {
-                threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
+                root: null,
+                rootMargin: '0px 0px -60px 0px',
+                threshold: 0.12
             };
 
             const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
+                entries.forEach((entry, index) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        /* Sequential Stagger for Article Cards */
+                        if (entry.target.classList.contains('article-card')) {
+                            setTimeout(() => {
+                                entry.target.classList.add('reveal-active');
+                            }, index * 120);
+                        } else {
+                            entry.target.classList.add('reveal-active');
+                        }
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .card');
-            revealElements.forEach(el => revealObserver.observe(el));
+            document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => {
+                revealObserver.observe(el);
+            });
         });
     </script>
 </body>
