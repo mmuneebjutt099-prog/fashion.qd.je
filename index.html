@@ -8,7 +8,30 @@
     <title>Fashion Trends, Beauty & Style Inspiration | Fashion QD</title>
 
     <!-- Favicon -->
-<link rel="icon" href="/fashion-icon.png?v=20260824" type="image/png">  
+    
+<script>
+const canvas = document.createElement("canvas");
+canvas.width = 64;
+canvas.height = 64;
+
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#111";
+ctx.fillRect(0, 0, 64, 64);
+
+ctx.fillStyle = "#fff";
+ctx.font = "bold 30px Arial";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
+ctx.fillText("QD", 32, 32);
+
+const favicon = document.createElement("link");
+favicon.rel = "icon";
+favicon.type = "image/png";
+favicon.href = canvas.toDataURL("image/png");
+
+document.head.appendChild(favicon);
+</script>
     
     <meta name="description" content="Discover the latest fashion trends, outfit ideas, beauty tips and style inspiration at Fashion QD. Explore practical ideas for modern everyday style.">
 
