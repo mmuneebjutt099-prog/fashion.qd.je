@@ -6,9 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shopping | Fashion, Beauty & Style Products | Fashion QD</title>
+    <title>Shopping | Fashion QD – Fashion, Beauty & Style Picks</title>
 
-    <meta name="description" content="Discover fashion, beauty and lifestyle shopping inspiration, product guides, style picks and useful shopping ideas from Fashion QD.">
+    <meta name="description" content="Discover fashion, beauty and lifestyle products selected by Fashion QD. Explore useful products, style essentials and shopping picks in one place.">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -25,16 +25,16 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Shopping | Fashion, Beauty & Style Products | Fashion QD">
-    <meta property="og:description" content="Explore fashion, beauty and lifestyle shopping inspiration, product guides and useful style picks from Fashion QD.">
+    <meta property="og:title" content="Shopping | Fashion QD">
+    <meta property="og:description" content="Explore fashion, beauty and lifestyle shopping picks from Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/shopping.html">
     <meta property="og:site_name" content="Fashion QD">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shopping | Fashion, Beauty & Style Products | Fashion QD">
-    <meta name="twitter:description" content="Explore fashion, beauty and lifestyle shopping inspiration from Fashion QD.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shopping | Fashion QD">
+    <meta name="twitter:description" content="Explore fashion, beauty and lifestyle shopping picks from Fashion QD.">
 
     <!-- Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,10 +49,11 @@
 
     <noscript>
         <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
             rel="stylesheet"
         >
     </noscript>
+
 
     <!-- WebPage Schema -->
     <script type="application/ld+json">
@@ -60,8 +61,8 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Shopping | Fashion QD",
+      "description": "Fashion, beauty and lifestyle shopping picks from Fashion QD.",
       "url": "https://fashion.qd.je/shopping.html",
-      "description": "Fashion, beauty and lifestyle shopping inspiration, product guides and useful shopping ideas from Fashion QD.",
       "isPartOf": {
         "@type": "WebSite",
         "name": "Fashion QD",
@@ -69,6 +70,7 @@
       }
     }
     </script>
+
 
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -92,6 +94,7 @@
     }
     </script>
 
+
     <style>
 
         :root {
@@ -106,15 +109,18 @@
             --max: 1120px;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", Arial, sans-serif;
@@ -123,15 +129,12 @@
             line-height: 1.8;
         }
 
-        img {
-            display: block;
-            max-width: 100%;
-        }
 
         a {
             color: inherit;
             text-decoration: none;
         }
+
 
         .container {
             width: min(92%, var(--max));
@@ -140,7 +143,7 @@
 
 
         /* =========================
-           TOPBAR
+           TOP BAR
         ========================== */
 
         .topbar {
@@ -162,6 +165,7 @@
             border-bottom: 1px solid var(--border);
         }
 
+
         .header-inner {
             min-height: 78px;
             display: flex;
@@ -170,15 +174,18 @@
             gap: 25px;
         }
 
+
         .logo {
             font-family: "Playfair Display", Georgia, serif;
             font-size: 30px;
             font-weight: 700;
         }
 
+
         .logo span {
             color: var(--accent);
         }
+
 
         nav {
             display: flex;
@@ -186,14 +193,21 @@
             align-items: center;
         }
 
+
         nav a {
             font-size: 14px;
             font-weight: 600;
             transition: color .25s ease;
         }
 
+
         nav a:hover {
             color: var(--accent);
+        }
+
+
+        nav a.active {
+            color: var(--accent-dark);
         }
 
 
@@ -201,30 +215,32 @@
            HERO
         ========================== */
 
-        .hero {
-            padding: 85px 0 75px;
+        .shop-hero {
+            padding: 85px 0 70px;
             background:
                 linear-gradient(
                     135deg,
                     #faf8f5,
                     #ffffff
                 );
-            overflow: hidden;
+            text-align: center;
         }
+
 
         .breadcrumb {
             font-size: 14px;
             color: var(--muted);
             margin-bottom: 25px;
-            animation: fadeDown .7s ease both;
         }
+
 
         .breadcrumb a {
             color: var(--accent-dark);
             font-weight: 600;
         }
 
-        .hero-label {
+
+        .eyebrow {
             display: inline-block;
             color: var(--accent-dark);
             font-size: 12px;
@@ -232,276 +248,266 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 15px;
-            animation: fadeUp .7s ease .1s both;
         }
 
-        .hero h1 {
+
+        .shop-hero h1 {
             max-width: 850px;
+            margin: auto;
             font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(44px, 6vw, 70px);
+            font-size: clamp(42px, 6vw, 68px);
             line-height: 1.08;
             color: var(--dark);
-            margin-bottom: 25px;
+            animation: fadeUp .8s ease both;
+        }
+
+
+        .shop-hero p {
+            max-width: 720px;
+            margin: 22px auto 0;
+            color: #606060;
+            font-size: 18px;
             animation: fadeUp .8s ease .15s both;
         }
 
-        .hero p {
-            max-width: 760px;
-            color: #606060;
-            font-size: 19px;
-            animation: fadeUp .8s ease .25s both;
+
+        /* =========================
+           INTRO
+        ========================== */
+
+        .intro {
+            padding: 65px 0 25px;
+        }
+
+
+        .intro-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+
+        .intro-content h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+
+        .intro-content p {
+            color: var(--muted);
         }
 
 
         /* =========================
-           SECTION
+           CATEGORY FILTERS
         ========================== */
 
-        .section {
-            padding: 75px 0;
+        .shop-categories {
+            padding: 35px 0 20px;
         }
+
+
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+
+        .category-btn {
+            padding: 10px 19px;
+            border: 1px solid var(--border);
+            border-radius: 30px;
+            background: #ffffff;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 600;
+            transition:
+                background .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                transform .25s ease;
+        }
+
+
+        .category-btn:hover {
+            background: var(--dark);
+            color: #ffffff;
+            border-color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================== */
+
+        .products-section {
+            padding: 45px 0 80px;
+        }
+
 
         .section-heading {
-            max-width: 750px;
-            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 28px;
         }
 
-        .section-heading span {
-            color: var(--accent-dark);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
 
         .section-heading h2 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: 42px;
-            line-height: 1.2;
+            font-size: 38px;
             color: var(--dark);
-            margin: 10px 0 15px;
         }
+
 
         .section-heading p {
             color: var(--muted);
-            font-size: 16px;
+            font-size: 14px;
         }
 
 
-        /* =========================
-           SHOPPING CATEGORIES
-        ========================== */
-
-        .category-grid {
+        .product-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
         }
 
-        .category-card {
-            min-height: 220px;
-            padding: 30px 25px;
+
+        .product-card {
             border: 1px solid var(--border);
-            border-radius: 10px;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            position: relative;
+            border-radius: 12px;
             overflow: hidden;
+            background: #ffffff;
             transition:
                 transform .3s ease,
                 box-shadow .3s ease,
                 border-color .3s ease;
         }
 
-        .category-card::before {
-            content: "";
-            position: absolute;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 1px solid var(--border);
-            right: -45px;
-            top: -45px;
-            transition: transform .4s ease;
-        }
 
-        .category-card:hover {
+        .product-card:hover {
             transform: translateY(-7px);
             box-shadow: 0 18px 40px rgba(0,0,0,.09);
             border-color: var(--accent);
         }
 
-        .category-card:hover::before {
-            transform: scale(1.3);
-        }
 
-        .category-number {
-            position: absolute;
-            top: 22px;
-            left: 22px;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: var(--dark);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-
-        .category-card h3 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 25px;
-            color: var(--dark);
-            margin-bottom: 7px;
-        }
-
-        .category-card p {
-            font-size: 14px;
-            color: var(--muted);
-        }
-
-
-        /* =========================
-           PRODUCT AREA
-        ========================== */
-
-        .shopping-area {
-            background: var(--light);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-
-        .product-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            transition:
-                transform .3s ease,
-                box-shadow .3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 18px 40px rgba(0,0,0,.09);
-        }
-
+        /* Product placeholder */
         .product-image {
-            height: 230px;
+            min-height: 220px;
             background:
                 linear-gradient(
                     135deg,
-                    #f3eee8,
-                    #ffffff
+                    #f7f5f2,
+                    #ece7e1
                 );
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--muted);
-            font-size: 14px;
-            letter-spacing: .5px;
+            position: relative;
         }
+
+
+        .product-image span {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 24px;
+            color: #9b8d7f;
+        }
+
+
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--dark);
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
 
         .product-info {
-            padding: 25px;
+            padding: 23px;
         }
 
-        .product-label {
+
+        .product-category {
             color: var(--accent-dark);
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            margin-bottom: 7px;
         }
+
 
         .product-info h3 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: 24px;
             color: var(--dark);
-            margin: 8px 0 10px;
+            font-size: 24px;
+            line-height: 1.25;
+            margin-bottom: 9px;
         }
+
 
         .product-info p {
-            font-size: 14px;
             color: var(--muted);
-            margin-bottom: 18px;
+            font-size: 14px;
+            margin-bottom: 17px;
         }
 
-        .product-button {
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 17px;
+        }
+
+
+        .current-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+
+        .old-price {
+            font-size: 14px;
+            color: #999999;
+            text-decoration: line-through;
+        }
+
+
+        .shop-button {
             display: inline-block;
-            padding: 11px 20px;
-            border: 1px solid var(--dark);
+            width: 100%;
+            padding: 12px 18px;
             background: var(--dark);
             color: #ffffff;
-            border-radius: 4px;
-            font-size: 13px;
-            font-weight: 600;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 700;
             transition:
                 background .25s ease,
                 transform .25s ease;
         }
 
-        .product-button:hover {
-            background: var(--accent);
-            border-color: var(--accent);
+
+        .shop-button:hover {
+            background: var(--accent-dark);
             transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           SHOPPING GUIDES
-        ========================== */
-
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .guide-card {
-            border: 1px solid var(--border);
-            border-radius: 9px;
-            padding: 28px;
-            background: #ffffff;
-            transition:
-                transform .3s ease,
-                box-shadow .3s ease;
-        }
-
-        .guide-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,.08);
-        }
-
-        .guide-card h3 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 24px;
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        .guide-card p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 18px;
-        }
-
-        .guide-link {
-            color: var(--accent-dark);
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .guide-link:hover {
-            color: var(--dark);
         }
 
 
@@ -509,124 +515,104 @@
            HOW IT WORKS
         ========================== */
 
-        .steps {
+        .how-section {
+            padding: 75px 0;
+            background: var(--light);
+        }
+
+
+        .how-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+
+        .how-heading h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 38px;
+            color: var(--dark);
+        }
+
+
+        .how-heading p {
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+
+        .how-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .step {
+
+        .how-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
             text-align: center;
-            padding: 30px 20px;
         }
 
-        .step-number {
-            width: 52px;
-            height: 52px;
+
+        .how-number {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto 17px;
             border-radius: 50%;
             background: var(--dark);
             color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 18px;
             font-weight: 700;
-            font-size: 18px;
         }
 
-        .step h3 {
+
+        .how-card h3 {
             font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
             font-size: 23px;
             margin-bottom: 8px;
-            color: var(--dark);
         }
 
-        .step p {
+
+        .how-card p {
             color: var(--muted);
             font-size: 14px;
         }
 
 
         /* =========================
-           TRUST BOX
+           SHOPPING NOTE
         ========================== */
 
-        .trust-box {
-            background: var(--dark);
-            color: #ffffff;
-            padding: 50px 40px;
-            border-radius: 12px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .trust-box::after {
-            content: "";
-            position: absolute;
-            width: 220px;
-            height: 220px;
-            border: 1px solid rgba(255,255,255,.15);
-            border-radius: 50%;
-            right: -70px;
-            top: -70px;
-            animation: pulse 5s ease-in-out infinite;
-        }
-
-        .trust-box h2 {
-            position: relative;
-            z-index: 1;
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .trust-box p {
-            position: relative;
-            z-index: 1;
-            max-width: 760px;
-            color: #cccccc;
+        .shopping-note {
+            padding: 70px 0;
         }
 
 
-        /* =========================
-           CTA
-        ========================== */
-
-        .cta {
-            text-align: center;
-            padding: 75px 20px;
-        }
-
-        .cta h2 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: 42px;
-            color: var(--dark);
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            max-width: 650px;
+        .note-box {
+            max-width: 900px;
             margin: auto;
+            padding: 35px;
+            border-left: 4px solid var(--accent);
+            background: var(--light);
+            border-radius: 0 10px 10px 0;
+        }
+
+
+        .note-box h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+
+        .note-box p {
             color: var(--muted);
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 13px 26px;
-            background: var(--dark);
-            color: #ffffff;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            transition:
-                transform .25s ease,
-                background .25s ease;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            background: var(--accent);
         }
 
 
@@ -638,8 +624,9 @@
             background: #0b0b0b;
             color: #aaaaaa;
             padding: 45px 0 25px;
-            margin-top: 0;
+            margin-top: 30px;
         }
+
 
         .footer-grid {
             display: grid;
@@ -648,6 +635,7 @@
             margin-bottom: 30px;
         }
 
+
         footer h3 {
             color: #ffffff;
             font-family: "Playfair Display", Georgia, serif;
@@ -655,14 +643,17 @@
             margin-bottom: 12px;
         }
 
+
         footer p,
         footer a {
             font-size: 14px;
         }
 
+
         footer a:hover {
             color: #ffffff;
         }
+
 
         .footer-bottom {
             border-top: 1px solid #292929;
@@ -690,52 +681,18 @@
 
         }
 
-        @keyframes fadeDown {
-
-            from {
-                opacity: 0;
-                transform: translateY(-15px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: .5;
-            }
-
-            50% {
-                transform: scale(1.2);
-                opacity: .15;
-            }
-
-        }
-
 
         /* =========================
            RESPONSIVE
         ========================== */
 
-        @media (max-width: 950px) {
+        @media (max-width: 900px) {
 
-            .category-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .product-grid,
-            .guide-grid {
+            .product-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
-            .steps {
+            .how-grid {
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -759,41 +716,30 @@
                 gap: 12px 18px;
             }
 
-            .hero {
+            .shop-hero {
                 padding: 55px 0 45px;
             }
 
-            .hero h1 {
+            .shop-hero h1 {
                 font-size: 42px;
             }
 
-            .hero p {
-                font-size: 17px;
+            .shop-hero p {
+                font-size: 16px;
             }
 
-            .section {
-                padding: 55px 0;
+            .section-heading {
+                display: block;
             }
 
-            .section-heading h2,
-            .cta h2 {
-                font-size: 34px;
+            .section-heading p {
+                margin-top: 6px;
             }
 
-            .category-grid,
             .product-grid,
-            .guide-grid,
-            .steps,
+            .how-grid,
             .footer-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .trust-box {
-                padding: 35px 25px;
-            }
-
-            .trust-box h2 {
-                font-size: 32px;
             }
 
         }
@@ -826,7 +772,7 @@
 
 
 <!-- =========================
-     TOPBAR
+     TOP BAR
 ========================== -->
 
 <div class="topbar">
@@ -846,6 +792,7 @@
             Fashion <span>QD</span>
         </a>
 
+
         <nav aria-label="Main navigation">
 
             <a href="/">Home</a>
@@ -858,7 +805,7 @@
 
             <a href="/street-style.html">Street Style</a>
 
-            <a href="/shopping.html">Shopping</a>
+            <a href="/shopping.html" class="active">Shopping</a>
 
             <a href="/about.html">About</a>
 
@@ -878,7 +825,7 @@
      HERO
 ========================== -->
 
-<section class="hero">
+<section class="shop-hero">
 
     <div class="container">
 
@@ -893,20 +840,19 @@
         </div>
 
 
-        <span class="hero-label">
+        <span class="eyebrow">
             Fashion QD Shopping
         </span>
 
 
         <h1>
-            Shop Fashion, Beauty & Style With Confidence
+            Shop Fashion, Beauty & Style Essentials
         </h1>
 
 
         <p>
-            Explore useful shopping inspiration, fashion picks, beauty
-            essentials and lifestyle ideas. Our shopping section is designed
-            to help you discover products and make more informed choices.
+            Discover carefully selected fashion, beauty and lifestyle products
+            that can complement your everyday style and wardrobe.
         </p>
 
     </div>
@@ -915,101 +861,25 @@
 
 
 <!-- =========================
-     SHOPPING CATEGORIES
+     INTRO
 ========================== -->
 
-<section class="section">
+<section class="intro">
 
     <div class="container">
 
-        <div class="section-heading">
-
-            <span>
-                Explore
-            </span>
+        <div class="intro-content">
 
             <h2>
-                Shopping Categories
+                Discover Our Shopping Picks
             </h2>
 
             <p>
-                Browse different areas of fashion, beauty and lifestyle
-                shopping inspiration.
+                We are building a collection of useful products and style
+                essentials for readers who want simple, practical and
+                inspiring shopping ideas.
+
             </p>
-
-        </div>
-
-
-        <div class="category-grid">
-
-
-            <a href="/fashion.html" class="category-card">
-
-                <span class="category-number">
-                    1
-                </span>
-
-                <h3>
-                    Fashion
-                </h3>
-
-                <p>
-                    Clothing, outfits, wardrobe essentials and style inspiration.
-                </p>
-
-            </a>
-
-
-            <a href="/beauty.html" class="category-card">
-
-                <span class="category-number">
-                    2
-                </span>
-
-                <h3>
-                    Beauty
-                </h3>
-
-                <p>
-                    Beauty inspiration, skincare ideas and everyday essentials.
-                </p>
-
-            </a>
-
-
-            <a href="/street-style.html" class="category-card">
-
-                <span class="category-number">
-                    3
-                </span>
-
-                <h3>
-                    Street Style
-                </h3>
-
-                <p>
-                    Modern streetwear ideas and everyday style inspiration.
-                </p>
-
-            </a>
-
-
-            <a href="/categories.html" class="category-card">
-
-                <span class="category-number">
-                    4
-                </span>
-
-                <h3>
-                    More Ideas
-                </h3>
-
-                <p>
-                    Explore more Fashion QD categories and lifestyle inspiration.
-                </p>
-
-            </a>
-
 
         </div>
 
@@ -1019,26 +889,62 @@
 
 
 <!-- =========================
-     PRODUCT SECTION
+     CATEGORIES
 ========================== -->
 
-<section class="section shopping-area">
+<section class="shop-categories">
+
+    <div class="container">
+
+        <div class="category-list">
+
+            <a href="#fashion-products" class="category-btn">
+                Fashion
+            </a>
+
+            <a href="#beauty-products" class="category-btn">
+                Beauty
+            </a>
+
+            <a href="#accessories" class="category-btn">
+                Accessories
+            </a>
+
+            <a href="#lifestyle" class="category-btn">
+                Lifestyle
+            </a>
+
+            <a href="#featured" class="category-btn">
+                Featured Picks
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTS
+========================== -->
+
+<section class="products-section" id="featured">
 
     <div class="container">
 
         <div class="section-heading">
 
-            <span>
-                Featured Shopping
-            </span>
+            <div>
 
-            <h2>
-                Products Coming Soon
-            </h2>
+                <h2>
+                    Featured Shopping Picks
+                </h2>
+
+            </div>
 
             <p>
-                We are preparing a selection of useful fashion, beauty and
-                lifestyle products. Check back soon for new shopping picks.
+                Products will be added here soon.
             </p>
 
         </div>
@@ -1047,185 +953,303 @@
         <div class="product-grid">
 
 
-            <!-- PRODUCT SLOT 1 -->
+            <!-- PRODUCT 1 -->
 
-            <div class="product-card">
+            <article class="product-card" id="fashion-products">
 
                 <div class="product-image">
-                    Product Image
+
+                    <span>
+                        Product Image
+                    </span>
+
+                    <span class="product-badge">
+                        Featured
+                    </span>
+
                 </div>
+
 
                 <div class="product-info">
 
-                    <span class="product-label">
+                    <div class="product-category">
                         Fashion
-                    </span>
+                    </div>
 
                     <h3>
-                        Fashion Product
+                        Fashion Product Coming Soon
                     </h3>
 
                     <p>
-                        A future product recommendation from Fashion QD.
+                        A carefully selected fashion product will be featured
+                        here.
                     </p>
 
-                    <a href="#" class="product-button">
-                        Coming Soon
+
+                    <div class="product-price">
+
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="shop-button">
+                        View Product
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
-            <!-- PRODUCT SLOT 2 -->
+            <!-- PRODUCT 2 -->
 
-            <div class="product-card">
+            <article class="product-card" id="beauty-products">
 
                 <div class="product-image">
-                    Product Image
-                </div>
 
-                <div class="product-info">
+                    <span>
+                        Product Image
+                    </span>
 
-                    <span class="product-label">
+                    <span class="product-badge">
                         Beauty
                     </span>
 
-                    <h3>
-                        Beauty Product
-                    </h3>
-
-                    <p>
-                        A future beauty product recommendation from Fashion QD.
-                    </p>
-
-                    <a href="#" class="product-button">
-                        Coming Soon
-                    </a>
-
                 </div>
 
-            </div>
-
-
-            <!-- PRODUCT SLOT 3 -->
-
-            <div class="product-card">
-
-                <div class="product-image">
-                    Product Image
-                </div>
 
                 <div class="product-info">
 
-                    <span class="product-label">
-                        Lifestyle
-                    </span>
+                    <div class="product-category">
+                        Beauty
+                    </div>
 
                     <h3>
-                        Lifestyle Product
+                        Beauty Product Coming Soon
                     </h3>
 
                     <p>
-                        A future lifestyle product recommendation from Fashion QD.
+                        A useful beauty product will be added to this collection.
                     </p>
 
-                    <a href="#" class="product-button">
-                        Coming Soon
+
+                    <div class="product-price">
+
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="shop-button">
+                        View Product
                     </a>
 
                 </div>
 
-            </div>
+            </article>
 
 
-        </div>
+            <!-- PRODUCT 3 -->
 
-    </div>
+            <article class="product-card" id="accessories">
 
-</section>
+                <div class="product-image">
 
+                    <span>
+                        Product Image
+                    </span>
 
-<!-- =========================
-     SHOPPING GUIDES
-========================== -->
+                    <span class="product-badge">
+                        Style
+                    </span>
 
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>
-                Shopping Inspiration
-            </span>
-
-            <h2>
-                Helpful Shopping Guides
-            </h2>
-
-            <p>
-                Learn how to choose useful products and build a smarter,
-                more practical wardrobe.
-            </p>
-
-        </div>
+                </div>
 
 
-        <div class="guide-grid">
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Accessories
+                    </div>
+
+                    <h3>
+                        Style Accessory Coming Soon
+                    </h3>
+
+                    <p>
+                        Discover practical accessories selected for modern style.
+                    </p>
 
 
-            <article class="guide-card">
+                    <div class="product-price">
 
-                <h3>
-                    How to Choose Fashion Essentials
-                </h3>
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
 
-                <p>
-                    Learn how versatile wardrobe essentials can make everyday
-                    outfits easier to create.
-                </p>
+                    </div>
 
-                <a href="/fashion.html" class="guide-link">
-                    Explore Fashion →
-                </a>
+
+                    <a href="#" class="shop-button">
+                        View Product
+                    </a>
+
+                </div>
 
             </article>
 
 
-            <article class="guide-card">
+            <!-- PRODUCT 4 -->
 
-                <h3>
-                    Smart Beauty Shopping
-                </h3>
+            <article class="product-card" id="lifestyle">
 
-                <p>
-                    Discover practical ways to approach beauty shopping and
-                    choose products that fit your routine.
-                </p>
+                <div class="product-image">
 
-                <a href="/beauty.html" class="guide-link">
-                    Explore Beauty →
-                </a>
+                    <span>
+                        Product Image
+                    </span>
+
+                    <span class="product-badge">
+                        Lifestyle
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Lifestyle
+                    </div>
+
+                    <h3>
+                        Lifestyle Product Coming Soon
+                    </h3>
+
+                    <p>
+                        More useful lifestyle products will be featured here.
+                    </p>
+
+
+                    <div class="product-price">
+
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="shop-button">
+                        View Product
+                    </a>
+
+                </div>
 
             </article>
 
 
-            <article class="guide-card">
+            <!-- PRODUCT 5 -->
 
-                <h3>
-                    Build a Better Wardrobe
-                </h3>
+            <article class="product-card">
 
-                <p>
-                    Focus on versatile pieces that can be styled in multiple
-                    ways instead of buying everything at once.
-                </p>
+                <div class="product-image">
 
-                <a href="/articles/2026-fashion-trends.html" class="guide-link">
-                    Read Fashion Guide →
-                </a>
+                    <span>
+                        Product Image
+                    </span>
+
+                    <span class="product-badge">
+                        New
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Fashion
+                    </div>
+
+                    <h3>
+                        New Fashion Pick Coming Soon
+                    </h3>
+
+                    <p>
+                        New fashion discoveries will be added to the shop.
+                    </p>
+
+
+                    <div class="product-price">
+
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="shop-button">
+                        View Product
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+
+                    <span>
+                        Product Image
+                    </span>
+
+                    <span class="product-badge">
+                        Pick
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        Featured
+                    </div>
+
+                    <h3>
+                        Editor's Pick Coming Soon
+                    </h3>
+
+                    <p>
+                        Our selected editor's picks will appear in this section.
+                    </p>
+
+
+                    <div class="product-price">
+
+                        <span class="current-price">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+
+                    <a href="#" class="shop-button">
+                        View Product
+                    </a>
+
+                </div>
 
             </article>
 
@@ -1241,34 +1265,29 @@
      HOW SHOPPING WORKS
 ========================== -->
 
-<section class="section shopping-area">
+<section class="how-section">
 
     <div class="container">
 
-        <div class="section-heading">
-
-            <span>
-                Our Approach
-            </span>
+        <div class="how-heading">
 
             <h2>
-                A Simpler Way to Shop
+                How Our Shopping Section Works
             </h2>
 
             <p>
-                Fashion QD aims to make discovering useful products and
-                shopping inspiration easier.
+                Simple, useful and focused on products worth discovering.
             </p>
 
         </div>
 
 
-        <div class="steps">
+        <div class="how-grid">
 
 
-            <div class="step">
+            <div class="how-card">
 
-                <div class="step-number">
+                <div class="how-number">
                     1
                 </div>
 
@@ -1277,34 +1296,34 @@
                 </h3>
 
                 <p>
-                    Explore fashion, beauty and lifestyle products that may
-                    match your interests.
+                    Browse fashion, beauty, accessories and lifestyle products
+                    selected for our readers.
                 </p>
 
             </div>
 
 
-            <div class="step">
+            <div class="how-card">
 
-                <div class="step-number">
+                <div class="how-number">
                     2
                 </div>
 
                 <h3>
-                    Compare
+                    Explore
                 </h3>
 
                 <p>
-                    Review product information and consider features, value
-                    and suitability before purchasing.
+                    Read product information and explore the available shopping
+                    options.
                 </p>
 
             </div>
 
 
-            <div class="step">
+            <div class="how-card">
 
-                <div class="step-number">
+                <div class="how-number">
                     3
                 </div>
 
@@ -1313,8 +1332,8 @@
                 </h3>
 
                 <p>
-                    When products are available, use the relevant shopping
-                    link to visit the retailer or seller.
+                    Follow the product link to the relevant retailer or shopping
+                    platform.
                 </p>
 
             </div>
@@ -1328,54 +1347,27 @@
 
 
 <!-- =========================
-     TRUST / DISCLOSURE
+     NOTE
 ========================== -->
 
-<section class="section">
+<section class="shopping-note">
 
     <div class="container">
 
-        <div class="trust-box">
+        <div class="note-box">
 
             <h2>
-                Shopping With Transparency
+                Our Shopping Philosophy
             </h2>
 
             <p>
-                Some products featured on Fashion QD may be connected to
-                affiliate or partner programs. If you purchase through an
-                eligible link, Fashion QD may receive a commission at no
-                additional cost to you. Product availability, prices and
-                offers may change on the retailer's website.
+                Fashion QD focuses on discovering products that can genuinely
+                complement everyday style. Product information, prices and
+                availability may change, so always check the retailer's page
+                before making a purchase.
             </p>
 
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CTA
-========================== -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <h2>
-            Keep Exploring Fashion QD
-        </h2>
-
-        <p>
-            Discover fashion trends, beauty inspiration, street style and
-            practical ideas for modern everyday living.
-        </p>
-
-        <a href="/categories.html" class="cta-button">
-            Explore Categories
-        </a>
 
     </div>
 
@@ -1431,12 +1423,6 @@
                 <p>
                     <a href="/categories.html">
                         Categories
-                    </a>
-                </p>
-
-                <p>
-                    <a href="/street-style.html">
-                        Street Style
                     </a>
                 </p>
 
