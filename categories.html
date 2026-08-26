@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fashion Categories: Trends, Style, Beauty & Skincare | Fashion QD</title>
+    <title>Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD</title>
 
-    <meta name="description" content="Explore Fashion QD categories for fashion trends, outfit ideas, street style, beauty, skincare and lifestyle inspiration. Discover useful style content and fashion guides.">
+    <meta name="description" content="Explore Fashion QD categories for fashion trends, outfit ideas, street style, shopping, beauty, skincare, home, gardening and lifestyle inspiration. Discover useful style content and practical guides.">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -16,43 +17,53 @@
 
     <meta name="theme-color" content="#111111">
 
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Fashion Categories: Trends, Style, Beauty & Skincare | Fashion QD">
-    <meta property="og:description" content="Explore fashion, style, beauty, skincare and lifestyle categories from Fashion QD.">
+
+    <meta property="og:title" content="Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD">
+    <meta property="og:description" content="Explore fashion, street style, shopping, beauty, skincare, home, gardening and lifestyle categories from Fashion QD.">
     <meta property="og:url" content="https://fashion.qd.je/categories.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Fashion QD">
     <meta property="og:locale" content="en_US">
     <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85">
-    <meta property="og:image:alt" content="Fashion categories and style inspiration">
+    <meta property="og:image:alt" content="Fashion categories, street style, shopping and lifestyle inspiration">
+
 
     <!-- Twitter / X -->
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fashion Categories: Trends, Style, Beauty & Skincare | Fashion QD">
-    <meta name="twitter:description" content="Explore fashion, style, beauty, skincare and lifestyle categories from Fashion QD.">
+    <meta name="twitter:title" content="Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD">
+    <meta name="twitter:description" content="Explore fashion, street style, shopping, beauty, skincare, home, gardening and lifestyle categories from Fashion QD.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85">
+    <meta name="twitter:image:alt" content="Fashion categories and style inspiration">
+
 
     <!-- Performance -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
 
     <!-- WebSite Schema -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Fashion QD",
       "url": "https://fashion.qd.je/",
-      "description": "Fashion, beauty and style inspiration for modern readers.",
+      "description": "Fashion, beauty, home and lifestyle inspiration for modern readers.",
       "inLanguage": "en"
     }
     </script>
 
 
     <!-- Breadcrumb Schema -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -127,6 +138,16 @@
         }
 
 
+        .top-bar {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            letter-spacing: .3px;
+        }
+
+
         header {
             background: #fff;
             border-bottom: 1px solid var(--border);
@@ -173,21 +194,21 @@
 
 
         .hero {
-            min-height: 430px;
+            min-height: 470px;
             display: flex;
             align-items: center;
             color: #fff;
 
             background:
-                linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.18)),
+                linear-gradient(90deg, rgba(0,0,0,.74), rgba(0,0,0,.20)),
                 url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
                 center/cover no-repeat;
         }
 
 
         .hero-content {
-            max-width: 720px;
-            padding: 70px 0;
+            max-width: 780px;
+            padding: 75px 0;
         }
 
 
@@ -196,7 +217,7 @@
             letter-spacing: 3px;
             font-size: 12px;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 17px;
         }
 
 
@@ -204,26 +225,26 @@
             font-family: "Playfair Display", Georgia, serif;
             font-size: clamp(44px, 6vw, 70px);
             line-height: 1.05;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
 
         .hero p {
             font-size: 18px;
             color: #eee;
-            max-width: 650px;
+            max-width: 700px;
         }
 
 
         section {
-            padding: 80px 0;
+            padding: 85px 0;
         }
 
 
         .heading {
             text-align: center;
-            max-width: 720px;
-            margin: 0 auto 45px;
+            max-width: 780px;
+            margin: 0 auto 48px;
         }
 
 
@@ -239,7 +260,7 @@
         .heading h2 {
             font-family: "Playfair Display", Georgia, serif;
             color: var(--dark);
-            font-size: 45px;
+            font-size: clamp(36px, 4vw, 48px);
             line-height: 1.15;
             margin: 10px 0 15px;
         }
@@ -250,6 +271,8 @@
         }
 
 
+        /* CATEGORY GRID */
+
         .categories {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -258,7 +281,7 @@
 
 
         .category {
-            min-height: 320px;
+            min-height: 335px;
             display: flex;
             align-items: flex-end;
             padding: 28px;
@@ -267,6 +290,13 @@
             overflow: hidden;
             background-size: cover;
             background-position: center;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 35px rgba(0,0,0,.14);
         }
 
 
@@ -274,7 +304,11 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(0deg, rgba(0,0,0,.78), rgba(0,0,0,.05));
+            background: linear-gradient(
+                0deg,
+                rgba(0,0,0,.82),
+                rgba(0,0,0,.08)
+            );
         }
 
 
@@ -284,57 +318,88 @@
         }
 
 
+        .category-label {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #e7d0ba;
+            margin-bottom: 5px;
+        }
+
+
         .category h3 {
             font-family: "Playfair Display", Georgia, serif;
             font-size: 29px;
-            margin-bottom: 7px;
+            line-height: 1.2;
+            margin-bottom: 8px;
         }
 
 
         .category p {
             font-size: 14px;
+            line-height: 1.6;
             color: #eee;
         }
 
 
-        .category-content strong {
-            color: #fff;
-        }
-
+        /* CATEGORY IMAGES */
 
         .fashion {
-            background-image: url("https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=85");
         }
 
 
         .style {
-            background-image: url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85");
         }
 
 
         .street {
-            background-image: url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85");
+        }
+
+
+        .shopping {
+            background-image:
+                url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85");
         }
 
 
         .beauty {
-            background-image: url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85");
         }
 
 
         .skincare {
-            background-image: url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=85");
+        }
+
+
+        .home {
+            background-image:
+                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85");
+        }
+
+
+        .gardening {
+            background-image:
+                url("/articles/gardening-area.jpg");
         }
 
 
         .lifestyle {
-            background-image: url("https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1000&q=85");
+            background-image:
+                url("https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1000&q=85");
         }
 
-        .gardening {
-    background-image: url("/articles/gardening-area.jpg");
-}
 
+        /* FEATURED */
 
         .featured {
             background: var(--light);
@@ -342,19 +407,19 @@
 
 
         .article-box {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
             background: #fff;
             border: 1px solid var(--border);
-            padding: 35px;
+            padding: 40px;
         }
 
 
         .article-box h3 {
             font-family: "Playfair Display", Georgia, serif;
             color: var(--dark);
-            font-size: 30px;
-            margin-bottom: 12px;
+            font-size: 31px;
+            margin-bottom: 13px;
         }
 
 
@@ -379,6 +444,43 @@
         }
 
 
+        /* WHY SECTION */
+
+        .why {
+            background: #fff;
+        }
+
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .why-card {
+            border: 1px solid var(--border);
+            padding: 30px;
+            background: #fff;
+        }
+
+
+        .why-card h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: var(--dark);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+
+        .why-card p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+
+        /* INFO */
+
         .info {
             background: var(--light);
             text-align: center;
@@ -386,7 +488,7 @@
 
 
         .info-content {
-            max-width: 760px;
+            max-width: 800px;
             margin: auto;
         }
 
@@ -395,19 +497,21 @@
             font-family: "Playfair Display", Georgia, serif;
             color: var(--dark);
             font-size: 42px;
-            margin-bottom: 15px;
+            line-height: 1.15;
+            margin-bottom: 18px;
         }
 
 
         .info p {
             color: var(--muted);
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
 
         .info a {
             font-weight: 700;
             color: var(--dark);
+            border-bottom: 1px solid var(--accent);
         }
 
 
@@ -416,10 +520,35 @@
         }
 
 
+        /* CTA */
+
+        .cta {
+            background: var(--dark);
+            color: #fff;
+            text-align: center;
+        }
+
+
+        .cta h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+
+        .cta p {
+            max-width: 680px;
+            margin: auto;
+            color: #ccc;
+        }
+
+
+        /* FOOTER */
+
         footer {
             background: #0b0b0b;
             color: #aaa;
-            padding: 35px 0;
+            padding: 40px 0 25px;
             text-align: center;
         }
 
@@ -434,19 +563,34 @@
         }
 
 
-        @media (max-width: 850px) {
+        .footer-links {
+            margin-top: 12px;
+            line-height: 2;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
 
             .header {
                 flex-direction: column;
                 padding: 20px 0;
             }
 
+
             nav {
                 justify-content: center;
             }
 
+
             .categories {
                 grid-template-columns: 1fr 1fr;
+            }
+
+
+            .why-grid {
+                grid-template-columns: 1fr;
             }
 
         }
@@ -454,28 +598,63 @@
 
         @media (max-width: 550px) {
 
+            section {
+                padding: 60px 0;
+            }
+
+
             .categories {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 60px 0;
+
+            .category {
+                min-height: 300px;
             }
+
 
             .article-box {
                 padding: 25px;
             }
 
+
+            .hero {
+                min-height: 430px;
+            }
+
+
+            .hero-content {
+                padding: 60px 0;
+            }
+
+
+            .hero p {
+                font-size: 16px;
+            }
+
+
+            .cta h2 {
+                font-size: 35px;
+            }
+
         }
 
     </style>
-    
 
 </head>
 
 
 <body>
 
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+    Fashion, Beauty, Shopping, Home & Lifestyle Inspiration — Fashion QD
+</div>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -488,17 +667,34 @@
 
         <nav aria-label="Main navigation">
 
-            <a href="/">Home</a>
+            <a href="/">
+                Home
+            </a>
 
-            <a href="/fashion.html">Fashion</a>
 
-            <a href="/beauty.html">Beauty</a>
+            <a href="/fashion.html">
+                Fashion
+            </a>
 
-            <a href="/categories.html" aria-current="page">Categories</a>
 
-            <a href="/about.html">About</a>
+            <a href="/beauty.html">
+                Beauty
+            </a>
 
-            <a href="/contact.html">Contact</a>
+
+            <a href="/categories.html" aria-current="page">
+                Categories
+            </a>
+
+
+            <a href="/about.html">
+                About
+            </a>
+
+
+            <a href="/contact.html">
+                Contact
+            </a>
 
         </nav>
 
@@ -509,6 +705,8 @@
 
 <main>
 
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -522,14 +720,15 @@
 
 
             <h1>
-                Explore Fashion, Beauty & Style Categories
+                Explore Fashion, Beauty, Shopping & Home
             </h1>
 
 
             <p>
-                Explore fashion trends, outfit ideas, street style,
-                beauty inspiration, skincare ideas and lifestyle content
-                organized into easy-to-explore categories.
+                Discover fashion trends, outfit ideas, street style,
+                shopping inspiration, beauty, skincare, home ideas,
+                gardening and lifestyle content organized into
+                easy-to-explore categories.
             </p>
 
         </div>
@@ -539,13 +738,17 @@
 </section>
 
 
+<!-- MAIN CATEGORIES -->
+
 <section aria-labelledby="categories-heading">
 
     <div class="container">
 
         <div class="heading">
 
-            <span>Explore</span>
+            <span>
+                Explore Categories
+            </span>
 
 
             <h2 id="categories-heading">
@@ -554,9 +757,9 @@
 
 
             <p>
-                Browse Fashion QD's main categories to discover
-                practical fashion ideas, beauty inspiration and
-                modern lifestyle content.
+                Browse Fashion QD's main categories and discover
+                practical ideas covering personal style, shopping,
+                beauty, home inspiration and everyday living.
             </p>
 
         </div>
@@ -565,18 +768,27 @@
         <div class="categories">
 
 
-            <a href="/fashion.html"
-               class="category fashion"
-               aria-label="Explore Women's Fashion">
+            <!-- WOMEN'S FASHION -->
+
+            <a
+                href="/fashion.html"
+                class="category fashion"
+                aria-label="Explore Women's Fashion"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Fashion
+                    </div>
 
                     <h3>
                         Women's Fashion
                     </h3>
 
                     <p>
-                        Fashion trends, outfit ideas and wardrobe inspiration.
+                        Fashion trends, outfit ideas, wardrobe
+                        inspiration and seasonal style guides.
                     </p>
 
                 </div>
@@ -584,18 +796,27 @@
             </a>
 
 
-            <a href="/fashion.html"
-               class="category style"
-               aria-label="Explore Style Ideas">
+            <!-- STYLE -->
+
+            <a
+                href="/fashion.html"
+                class="category style"
+                aria-label="Explore Style Ideas"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Style
+                    </div>
 
                     <h3>
                         Style Ideas
                     </h3>
 
                     <p>
-                        Practical styling tips for creating confident looks.
+                        Practical styling ideas for creating
+                        polished and confident everyday looks.
                     </p>
 
                 </div>
@@ -603,18 +824,27 @@
             </a>
 
 
-            <a href="/fashion.html"
-               class="category street"
-               aria-label="Explore Street Style">
+            <!-- STREET STYLE -->
+
+            <a
+                href="/fashion.html"
+                class="category street"
+                aria-label="Explore Street Style"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Street Fashion
+                    </div>
 
                     <h3>
                         Street Style
                     </h3>
 
                     <p>
-                        Modern casual looks and everyday street fashion.
+                        Modern streetwear, casual outfits and
+                        everyday city fashion inspiration.
                     </p>
 
                 </div>
@@ -622,19 +852,55 @@
             </a>
 
 
-            <a href="/beauty.html"
-               class="category beauty"
-               aria-label="Explore Beauty">
+            <!-- SHOPPING -->
+
+            <a
+                href="/fashion.html"
+                class="category shopping"
+                aria-label="Explore Shopping"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Shopping
+                    </div>
+
+                    <h3>
+                        Shopping
+                    </h3>
+
+                    <p>
+                        Shopping inspiration, fashion finds,
+                        wardrobe essentials and useful buying ideas.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- BEAUTY -->
+
+            <a
+                href="/beauty.html"
+                class="category beauty"
+                aria-label="Explore Beauty"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Beauty
+                    </div>
 
                     <h3>
                         Beauty
                     </h3>
 
                     <p>
-                        Beauty inspiration, makeup ideas and practical
-                        everyday beauty content.
+                        Beauty inspiration, makeup ideas and
+                        practical everyday beauty content.
                     </p>
 
                 </div>
@@ -642,18 +908,27 @@
             </a>
 
 
-            <a href="/beauty.html"
-               class="category skincare"
-               aria-label="Explore Skincare">
+            <!-- SKINCARE -->
+
+            <a
+                href="/beauty.html"
+                class="category skincare"
+                aria-label="Explore Skincare"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Skincare
+                    </div>
 
                     <h3>
                         Skincare
                     </h3>
 
                     <p>
-                        Skincare inspiration and simple beauty routines.
+                        Skincare inspiration, routine ideas and
+                        simple beauty habits for everyday life.
                     </p>
 
                 </div>
@@ -661,43 +936,88 @@
             </a>
 
 
-            <a href="/"
-               class="category lifestyle"
-               aria-label="Explore Lifestyle">
+            <!-- HOME -->
+
+            <a
+                href="/"
+                class="category home"
+                aria-label="Explore Home Inspiration"
+            >
 
                 <div class="category-content">
+
+                    <div class="category-label">
+                        Home
+                    </div>
+
+                    <h3>
+                        Home
+                    </h3>
+
+                    <p>
+                        Home inspiration, interiors, decorating
+                        ideas and practical living spaces.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- GARDENING -->
+
+            <a
+                href="/articles/gardening-area-guide.html"
+                class="category gardening"
+                aria-label="Explore Gardening"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Home & Garden
+                    </div>
+
+                    <h3>
+                        Gardening
+                    </h3>
+
+                    <p>
+                        Garden planning, planting ideas and practical
+                        inspiration for creating beautiful outdoor spaces.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- LIFESTYLE -->
+
+            <a
+                href="/"
+                class="category lifestyle"
+                aria-label="Explore Lifestyle"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Lifestyle
+                    </div>
 
                     <h3>
                         Lifestyle
                     </h3>
 
                     <p>
-                        Fashion, beauty and lifestyle inspiration
-                        for modern everyday living.
+                        Fashion, beauty, home and everyday lifestyle
+                        inspiration for modern living.
                     </p>
 
                 </div>
 
             </a>
-
-            <a href="/articles/gardening-area-guide.html"
-   class="category gardening"
-   aria-label="Explore Gardening">
-
-    <div class="category-content">
-
-        <h3>
-            Gardening
-        </h3>
-
-        <p>
-            Garden planning, gardening ideas and practical outdoor
-            space inspiration.
-        </p>
-
-    </div>
-
-</a>
 
 
         </div>
@@ -707,23 +1027,27 @@
 </section>
 
 
+<!-- FEATURED CONTENT -->
+
 <section class="featured" aria-labelledby="featured-heading">
 
     <div class="container">
 
         <div class="heading">
 
-            <span>Featured Content</span>
+            <span>
+                Featured Content
+            </span>
 
 
             <h2 id="featured-heading">
-                Latest Fashion Article
+                Explore Fashion QD Articles
             </h2>
 
 
             <p>
-                Read our latest fashion content and discover practical
-                ideas and inspiration for your personal style.
+                Discover practical guides and inspiration covering
+                fashion trends, seasonal style and everyday ideas.
             </p>
 
         </div>
@@ -737,8 +1061,9 @@
 
 
             <p>
-                Explore summer fashion ideas, seasonal style inspiration
-                and practical outfit guidance in our featured fashion article.
+                Explore summer fashion ideas, seasonal style
+                inspiration and practical outfit guidance in our
+                featured fashion article.
             </p>
 
 
@@ -746,7 +1071,7 @@
                 href="/articles/summer-fashion-trends.html"
                 class="article-link"
             >
-                Read Summer Fashion Trends
+                Read Summer Fashion Trends →
             </a>
 
         </article>
@@ -756,6 +1081,88 @@
 </section>
 
 
+<!-- WHY EXPLORE -->
+
+<section class="why" aria-labelledby="why-heading">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>
+                Fashion QD
+            </span>
+
+
+            <h2 id="why-heading">
+                Inspiration for Every Part of Your Style
+            </h2>
+
+
+            <p>
+                Fashion QD brings different areas of fashion,
+                beauty and lifestyle together so readers can
+                discover new ideas in one place.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <article class="why-card">
+
+                <h3>
+                    Discover New Trends
+                </h3>
+
+                <p>
+                    Explore seasonal fashion trends, modern outfit
+                    ideas and style inspiration for different occasions.
+                </p>
+
+            </article>
+
+
+            <article class="why-card">
+
+                <h3>
+                    Find Everyday Ideas
+                </h3>
+
+                <p>
+                    Discover practical ideas for everyday outfits,
+                    shopping, beauty routines and personal style.
+                </p>
+
+            </article>
+
+
+            <article class="why-card">
+
+                <h3>
+                    Explore Home & Garden
+                </h3>
+
+                <p>
+                    Go beyond fashion with home inspiration,
+                    gardening ideas and lifestyle content for
+                    modern everyday living.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INFORMATION -->
+
 <section class="info" aria-labelledby="info-heading">
 
     <div class="container">
@@ -763,36 +1170,45 @@
         <div class="info-content">
 
             <h2 id="info-heading">
-                Fashion, Beauty & Lifestyle Inspiration
+                Fashion, Beauty, Home & Lifestyle Inspiration
             </h2>
 
 
             <p>
-                Fashion QD brings together modern fashion trends,
-                personal style inspiration, beauty ideas, skincare
-                content and lifestyle topics for readers who want
-                useful and inspiring ideas.
+                Fashion QD brings together fashion trends,
+                personal style inspiration, street style,
+                shopping ideas, beauty, skincare, home,
+                gardening and lifestyle content for modern readers.
             </p>
 
 
             <p>
                 Start with our
-                <a href="/fashion.html">fashion content</a>,
+                <a href="/fashion.html">
+                    fashion content
+                </a>,
                 explore
-                <a href="/beauty.html">beauty and skincare</a>,
-                or read our
-                <a href="/articles/summer-fashion-trends.html">
-                    latest fashion article
-                </a>.
+                <a href="/beauty.html">
+                    beauty and skincare
+                </a>,
+                or browse the categories above to discover
+                more inspiration.
             </p>
 
 
             <p>
-                Learn more
-                <a href="/about.html">about Fashion QD</a>
+                You can also read our
+                <a href="/articles/summer-fashion-trends.html">
+                    latest fashion article
+                </a>,
+                learn more
+                <a href="/about.html">
+                    about Fashion QD
+                </a>
                 or
-                <a href="/contact.html">contact us</a>
-                if you have questions or suggestions.
+                <a href="/contact.html">
+                    contact us
+                </a>.
             </p>
 
         </div>
@@ -802,42 +1218,79 @@
 </section>
 
 
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Find Your Next Inspiration
+        </h2>
+
+
+        <p>
+            Explore Fashion QD's fashion, street style, shopping,
+            beauty, home and lifestyle categories and discover
+            ideas for your everyday life.
+        </p>
+
+    </div>
+
+</section>
+
+
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
     <div class="container">
 
         <p>
-
             © 2026 Fashion QD. All rights reserved.
-
-            &nbsp; | &nbsp;
-
-            <a href="/">Home</a>
-
-            &nbsp; | &nbsp;
-
-            <a href="/fashion.html">Fashion</a>
-
-            &nbsp; | &nbsp;
-
-            <a href="/beauty.html">Beauty</a>
-
-            &nbsp; | &nbsp;
-
-            <a href="/categories.html">Categories</a>
-
-            &nbsp; | &nbsp;
-
-            <a href="/about.html">About</a>
-
-            &nbsp; | &nbsp;
-
-            <a href="/contact.html">Contact</a>
-
         </p>
+
+
+        <div class="footer-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/fashion.html">
+                Fashion
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/beauty.html">
+                Beauty
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/categories.html">
+                Categories
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/about.html">
+                About
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/contact.html">
+                Contact
+            </a>
+
+        </div>
 
     </div>
 
