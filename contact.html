@@ -25,7 +25,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <style>
+
         :root {
             --dark: #111111;
             --text: #333333;
@@ -52,6 +58,7 @@
             color: var(--text);
             background: var(--white);
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
         a {
@@ -59,10 +66,19 @@
             color: inherit;
         }
 
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
         .container {
             width: min(92%, var(--max-width));
             margin: auto;
         }
+
+        /* =========================
+           TOP BAR
+        ========================= */
 
         .top-bar {
             background: var(--dark);
@@ -73,9 +89,15 @@
             letter-spacing: .3px;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #fff;
             border-bottom: 1px solid var(--border);
+            position: relative;
+            z-index: 10;
         }
 
         .header-inner {
@@ -83,7 +105,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
+            gap: 25px;
         }
 
         .logo {
@@ -91,6 +113,7 @@
             font-size: 32px;
             font-weight: 700;
             color: var(--dark);
+            white-space: nowrap;
         }
 
         .logo span {
@@ -100,34 +123,99 @@
         nav {
             display: flex;
             align-items: center;
-            gap: 27px;
+            justify-content: flex-end;
+            gap: 21px;
             flex-wrap: wrap;
         }
 
         nav a {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: #333;
-            transition: .2s ease;
+            position: relative;
+            transition: color .25s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width .25s ease;
         }
 
         nav a:hover {
             color: var(--accent);
         }
 
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
         .page-hero {
-            background:
-                linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.30)),
-                url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
-                center/cover no-repeat;
-            min-height: 390px;
+            position: relative;
+            min-height: 430px;
             display: flex;
             align-items: center;
             color: #fff;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.76),
+                    rgba(0,0,0,.35)
+                ),
+                url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
+                center/cover no-repeat;
+
+            animation: heroPhoto 1.4s ease both;
+        }
+
+        @keyframes heroPhoto {
+
+            from {
+                opacity: 0;
+                transform: scale(1.04);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 720px;
+            animation: heroContent 1s ease .25s both;
+        }
+
+        @keyframes heroContent {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .eyebrow {
@@ -151,6 +239,10 @@
             max-width: 620px;
         }
 
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
         .contact-section {
             padding: 90px 0;
         }
@@ -160,6 +252,40 @@
             grid-template-columns: 1fr 1fr;
             gap: 70px;
             align-items: start;
+        }
+
+        .contact-info {
+            animation: revealLeft .9s ease both;
+        }
+
+        .contact-form {
+            animation: revealRight .9s ease .15s both;
+        }
+
+        @keyframes revealLeft {
+
+            from {
+                opacity: 0;
+                transform: translateX(-45px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes revealRight {
+
+            from {
+                opacity: 0;
+                transform: translateX(45px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         .section-label {
@@ -186,6 +312,10 @@
             max-width: 520px;
         }
 
+        /* =========================
+           CONTACT DETAILS
+        ========================= */
+
         .contact-details {
             display: grid;
             gap: 18px;
@@ -195,6 +325,16 @@
             border: 1px solid var(--border);
             padding: 22px 24px;
             background: #fff;
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+        .detail-box:hover {
+            transform: translateY(-6px);
+            border-color: #d5c1ad;
+            box-shadow: 0 12px 30px rgba(0,0,0,.07);
         }
 
         .detail-box h3 {
@@ -213,6 +353,10 @@
         .detail-box a:hover {
             color: var(--accent);
         }
+
+        /* =========================
+           FORM
+        ========================= */
 
         .contact-form {
             background: var(--light);
@@ -245,6 +389,9 @@
             font-family: "DM Sans", Arial, sans-serif;
             font-size: 15px;
             outline: none;
+            transition:
+                border-color .25s ease,
+                box-shadow .25s ease;
         }
 
         .form-group textarea {
@@ -255,6 +402,7 @@
         .form-group input:focus,
         .form-group textarea:focus {
             border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(180,138,100,.10);
         }
 
         .button {
@@ -267,11 +415,14 @@
             font-size: 14px;
             font-weight: 700;
             cursor: pointer;
-            transition: .2s ease;
+            transition:
+                background .25s ease,
+                transform .25s ease;
         }
 
         .button:hover {
             background: var(--accent);
+            transform: translateY(-2px);
         }
 
         .note {
@@ -279,6 +430,95 @@
             font-size: 12px;
             color: #888;
         }
+
+        /* =========================
+           PHOTO SECTION
+        ========================= */
+
+        .inspiration-section {
+            padding: 0 0 90px;
+        }
+
+        .inspiration-grid {
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+        .inspiration-image {
+            min-height: 420px;
+            background:
+                linear-gradient(
+                    rgba(0,0,0,.12),
+                    rgba(0,0,0,.12)
+                ),
+                url("https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1400&q=85")
+                center/cover no-repeat;
+
+            animation: imageReveal 1.2s ease both;
+            transition: transform .8s ease;
+        }
+
+        .inspiration-grid:hover .inspiration-image {
+            transform: scale(1.04);
+        }
+
+        @keyframes imageReveal {
+
+            from {
+                opacity: 0;
+                transform: scale(1.08);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .inspiration-text {
+            background: #111;
+            color: #fff;
+            padding: 65px 55px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: textReveal 1s ease .2s both;
+        }
+
+        @keyframes textReveal {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .inspiration-text .section-label {
+            color: var(--accent);
+        }
+
+        .inspiration-text h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 42px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .inspiration-text p {
+            color: #ccc;
+            max-width: 480px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0c0c0c;
@@ -306,6 +546,10 @@
             color: #aaa;
         }
 
+        footer a {
+            transition: color .2s ease;
+        }
+
         footer a:hover {
             color: #fff;
         }
@@ -317,7 +561,12 @@
             text-align: center;
         }
 
-        @media (max-width: 850px) {
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 950px) {
+
             .header-inner {
                 flex-direction: column;
                 padding: 20px 0;
@@ -325,7 +574,7 @@
 
             nav {
                 justify-content: center;
-                gap: 15px 20px;
+                gap: 14px 19px;
             }
 
             .contact-grid {
@@ -333,18 +582,48 @@
                 gap: 45px;
             }
 
+            .inspiration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .inspiration-image {
+                min-height: 350px;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-        @media (max-width: 520px) {
+        @media (max-width: 600px) {
+
             .logo {
                 font-size: 28px;
             }
 
+            .top-bar {
+                font-size: 12px;
+                line-height: 1.5;
+            }
+
+            nav {
+                gap: 11px 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
             .page-hero {
-                min-height: 330px;
+                min-height: 350px;
+            }
+
+            .page-hero h1 {
+                font-size: 45px;
+            }
+
+            .page-hero p {
+                font-size: 16px;
             }
 
             .contact-section {
@@ -359,10 +638,41 @@
             .contact-form {
                 padding: 25px;
             }
-        }
-    </style>
 
-     
+            .inspiration-section {
+                padding-bottom: 60px;
+            }
+
+            .inspiration-image {
+                min-height: 280px;
+            }
+
+            .inspiration-text {
+                padding: 45px 25px;
+            }
+
+            .inspiration-text h2 {
+                font-size: 34px;
+            }
+        }
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -372,6 +682,7 @@
     </div>
 
     <header>
+
         <div class="container header-inner">
 
             <a href="index.html" class="logo">
@@ -379,21 +690,38 @@
             </a>
 
             <nav aria-label="Main navigation">
+
                 <a href="index.html">Home</a>
+
                 <a href="fashion.html">Fashion</a>
+
                 <a href="beauty.html">Beauty</a>
+
                 <a href="categories.html">Categories</a>
+
+                <a href="street-style.html">Street Style</a>
+
+                <a href="shopping.html">Shopping</a>
+
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+
+                <a href="contact.html" class="active">Contact</a>
+
             </nav>
 
         </div>
+
     </header>
+
 
     <main>
 
+        <!-- HERO -->
+
         <section class="page-hero">
+
             <div class="container">
+
                 <div class="hero-content">
 
                     <div class="eyebrow">
@@ -408,14 +736,20 @@
                     </p>
 
                 </div>
+
             </div>
+
         </section>
+
+
+        <!-- CONTACT -->
 
         <section class="contact-section">
 
             <div class="container">
 
                 <div class="contact-grid">
+
 
                     <div class="contact-info">
 
@@ -433,40 +767,59 @@
                             questions, please contact the Fashion QD team.
                         </p>
 
+
                         <div class="contact-details">
 
                             <div class="detail-box">
+
                                 <h3>Email</h3>
+
                                 <a href="mailto:brandseocompany@gmail.com">
                                     brandseocompany@gmail.com
                                 </a>
+
                             </div>
 
+
                             <div class="detail-box">
+
                                 <h3>Phone</h3>
+
                                 <a href="tel:+923269547318">
                                     +92 326 9547318
                                 </a>
+
                             </div>
 
+
                             <div class="detail-box">
+
                                 <h3>Website</h3>
+
                                 <a href="https://fashion.qd.je/">
                                     fashion.qd.je
                                 </a>
+
                             </div>
 
+
                             <div class="detail-box">
+
                                 <h3>Business Inquiries</h3>
+
                                 <p>
                                     Partnerships, collaborations and
                                     professional inquiries are welcome.
                                 </p>
+
                             </div>
 
                         </div>
 
                     </div>
+
+
+                    <!-- FORM -->
 
                     <div class="contact-form">
 
@@ -481,10 +834,19 @@
                             will open with the information you provide.
                         </p>
 
-                        <form action="mailto:brandseocompany@gmail.com" method="post" enctype="text/plain">
+
+                        <form
+                            action="mailto:brandseocompany@gmail.com"
+                            method="post"
+                            enctype="text/plain"
+                        >
 
                             <div class="form-group">
-                                <label for="name">Your Name</label>
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
                                 <input
                                     type="text"
                                     id="name"
@@ -492,10 +854,16 @@
                                     placeholder="Enter your name"
                                     required
                                 >
+
                             </div>
 
+
                             <div class="form-group">
-                                <label for="email">Your Email</label>
+
+                                <label for="email">
+                                    Your Email
+                                </label>
+
                                 <input
                                     type="email"
                                     id="email"
@@ -503,10 +871,16 @@
                                     placeholder="Enter your email"
                                     required
                                 >
+
                             </div>
 
+
                             <div class="form-group">
-                                <label for="subject">Subject</label>
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
                                 <input
                                     type="text"
                                     id="subject"
@@ -514,23 +888,32 @@
                                     placeholder="Enter subject"
                                     required
                                 >
+
                             </div>
 
+
                             <div class="form-group">
-                                <label for="message">Message</label>
+
+                                <label for="message">
+                                    Message
+                                </label>
+
                                 <textarea
                                     id="message"
                                     name="Message"
                                     placeholder="Write your message here..."
                                     required
                                 ></textarea>
+
                             </div>
+
 
                             <button type="submit" class="button">
                                 Send Message
                             </button>
 
                         </form>
+
 
                         <div class="note">
                             Your default email application will be used to send
@@ -545,7 +928,45 @@
 
         </section>
 
+
+        <!-- PHOTO + CONTENT -->
+
+        <section class="inspiration-section">
+
+            <div class="container">
+
+                <div class="inspiration-grid">
+
+                    <div class="inspiration-image"></div>
+
+                    <div class="inspiration-text">
+
+                        <div class="section-label">
+                            Fashion QD
+                        </div>
+
+                        <h2>
+                            Style, Inspiration & Everyday Ideas
+                        </h2>
+
+                        <p>
+                            Fashion QD brings together fashion, beauty,
+                            street style, shopping inspiration and useful
+                            ideas for modern everyday living.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -553,31 +974,82 @@
 
             <div class="footer-grid">
 
+
                 <div>
+
                     <h3>Fashion QD</h3>
+
                     <p>
-                        Fashion, beauty and lifestyle inspiration for
-                        modern everyday living.
+                        Fashion, beauty, street style and shopping
+                        inspiration for modern everyday living.
                     </p>
+
                 </div>
 
+
                 <div>
+
                     <h3>Explore</h3>
-                    <p><a href="fashion.html">Fashion</a></p>
-                    <p><a href="beauty.html">Beauty</a></p>
-                    <p><a href="categories.html">Categories</a></p>
+
+                    <p>
+                        <a href="fashion.html">
+                            Fashion
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="beauty.html">
+                            Beauty
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="categories.html">
+                            Categories
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="street-style.html">
+                            Street Style
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="shopping.html">
+                            Shopping
+                        </a>
+                    </p>
+
                 </div>
 
+
                 <div>
+
                     <h3>Information</h3>
-                    <p><a href="about.html">About Us</a></p>
-                    <p><a href="contact.html">Contact</a></p>
+
+                    <p>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </p>
+
                 </div>
+
 
             </div>
 
+
             <div class="footer-bottom">
+
                 © 2026 Fashion QD. All rights reserved.
+
             </div>
 
         </div>
