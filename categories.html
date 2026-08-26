@@ -7,9 +7,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD</title>
+    <title>Fashion Categories: Fashion, Beauty, Street Style, Shopping & Home | Fashion QD</title>
 
-    <meta name="description" content="Explore Fashion QD categories for fashion trends, outfit ideas, street style, shopping, beauty, skincare, home, gardening and lifestyle inspiration. Discover useful style content and practical guides.">
+    <meta name="description" content="Explore Fashion QD categories including fashion, beauty, street style, shopping, skincare, home, gardening and lifestyle. Discover practical style inspiration and useful guides.">
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
@@ -20,26 +20,37 @@
 
     <!-- Open Graph -->
 
-    <meta property="og:title" content="Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD">
-    <meta property="og:description" content="Explore fashion, street style, shopping, beauty, skincare, home, gardening and lifestyle categories from Fashion QD.">
+    <meta property="og:title" content="Fashion Categories: Fashion, Beauty, Street Style, Shopping & Home | Fashion QD">
+
+    <meta property="og:description" content="Explore Fashion QD categories including fashion, beauty, street style, shopping, skincare, home, gardening and lifestyle inspiration.">
+
     <meta property="og:url" content="https://fashion.qd.je/categories.html">
+
     <meta property="og:type" content="website">
+
     <meta property="og:site_name" content="Fashion QD">
+
     <meta property="og:locale" content="en_US">
+
     <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85">
-    <meta property="og:image:alt" content="Fashion categories, street style, shopping and lifestyle inspiration">
+
+    <meta property="og:image:alt" content="Fashion categories and style inspiration">
 
 
     <!-- Twitter / X -->
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fashion Categories: Trends, Street Style, Shopping, Beauty & Home | Fashion QD">
-    <meta name="twitter:description" content="Explore fashion, street style, shopping, beauty, skincare, home, gardening and lifestyle categories from Fashion QD.">
+
+    <meta name="twitter:title" content="Fashion Categories: Fashion, Beauty, Street Style, Shopping & Home | Fashion QD">
+
+    <meta name="twitter:description" content="Explore Fashion QD categories including fashion, beauty, street style, shopping, skincare, home, gardening and lifestyle inspiration.">
+
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85">
+
     <meta name="twitter:image:alt" content="Fashion categories and style inspiration">
 
 
-    <!-- Performance -->
+    <!-- Fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -56,7 +67,7 @@
       "@type": "WebSite",
       "name": "Fashion QD",
       "url": "https://fashion.qd.je/",
-      "description": "Fashion, beauty, home and lifestyle inspiration for modern readers.",
+      "description": "Fashion, beauty, street style, shopping, home and lifestyle inspiration.",
       "inLanguage": "en"
     }
     </script>
@@ -138,6 +149,8 @@
         }
 
 
+        /* TOP BAR */
+
         .top-bar {
             background: var(--dark);
             color: #fff;
@@ -147,6 +160,8 @@
             letter-spacing: .3px;
         }
 
+
+        /* HEADER */
 
         header {
             background: #fff;
@@ -167,6 +182,7 @@
             font-family: "Playfair Display", Georgia, serif;
             font-size: 32px;
             font-weight: 700;
+            white-space: nowrap;
         }
 
 
@@ -177,21 +193,27 @@
 
         nav {
             display: flex;
-            gap: 26px;
+            gap: 22px;
             flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
         }
 
 
         nav a {
             font-size: 14px;
             font-weight: 600;
+            transition: color .2s ease;
         }
 
 
-        nav a:hover {
+        nav a:hover,
+        nav a[aria-current="page"] {
             color: var(--accent);
         }
 
+
+        /* HERO */
 
         .hero {
             min-height: 470px;
@@ -200,7 +222,12 @@
             color: #fff;
 
             background:
-                linear-gradient(90deg, rgba(0,0,0,.74), rgba(0,0,0,.20)),
+                linear-gradient(
+                    90deg,
+                    rgba(0,0,0,.74),
+                    rgba(0,0,0,.20)
+                ),
+
                 url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
                 center/cover no-repeat;
         }
@@ -235,6 +262,8 @@
             max-width: 700px;
         }
 
+
+        /* GENERAL SECTIONS */
 
         section {
             padding: 85px 0;
@@ -290,7 +319,9 @@
             overflow: hidden;
             background-size: cover;
             background-position: center;
-            transition: transform .25s ease, box-shadow .25s ease;
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
         }
 
 
@@ -304,11 +335,13 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                0deg,
-                rgba(0,0,0,.82),
-                rgba(0,0,0,.08)
-            );
+
+            background:
+                linear-gradient(
+                    0deg,
+                    rgba(0,0,0,.84),
+                    rgba(0,0,0,.08)
+                );
         }
 
 
@@ -345,15 +378,21 @@
 
         /* CATEGORY IMAGES */
 
+        .home {
+            background-image:
+                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85");
+        }
+
+
         .fashion {
             background-image:
                 url("https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=1000&q=85");
         }
 
 
-        .style {
+        .beauty {
             background-image:
-                url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85");
+                url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85");
         }
 
 
@@ -369,21 +408,15 @@
         }
 
 
-        .beauty {
+        .style {
             background-image:
-                url("https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=85");
+                url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85");
         }
 
 
         .skincare {
             background-image:
                 url("https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=85");
-        }
-
-
-        .home {
-            background-image:
-                url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85");
         }
 
 
@@ -444,7 +477,7 @@
         }
 
 
-        /* WHY SECTION */
+        /* WHY */
 
         .why {
             background: #fff;
@@ -479,7 +512,7 @@
         }
 
 
-        /* INFO */
+        /* INFORMATION */
 
         .info {
             background: var(--light);
@@ -571,6 +604,19 @@
 
         /* RESPONSIVE */
 
+        @media (max-width: 1050px) {
+
+            .header {
+                gap: 20px;
+            }
+
+            nav {
+                gap: 17px;
+            }
+
+        }
+
+
         @media (max-width: 900px) {
 
             .header {
@@ -633,6 +679,11 @@
             }
 
 
+            .info h2 {
+                font-size: 34px;
+            }
+
+
             .cta h2 {
                 font-size: 35px;
             }
@@ -650,7 +701,9 @@
 <!-- TOP BAR -->
 
 <div class="top-bar">
-    Fashion, Beauty, Shopping, Home & Lifestyle Inspiration — Fashion QD
+
+    Fashion, Beauty, Street Style, Shopping, Home & Lifestyle Inspiration — Fashion QD
+
 </div>
 
 
@@ -661,7 +714,9 @@
     <div class="container header">
 
         <a href="/" class="logo" aria-label="Fashion QD Home">
+
             Fashion <span>QD</span>
+
         </a>
 
 
@@ -671,26 +726,29 @@
                 Home
             </a>
 
-
             <a href="/fashion.html">
                 Fashion
             </a>
-
 
             <a href="/beauty.html">
                 Beauty
             </a>
 
-
             <a href="/categories.html" aria-current="page">
                 Categories
             </a>
 
+            <a href="/street-style.html">
+                Street Style
+            </a>
+
+            <a href="/shopping.html">
+                Shopping
+            </a>
 
             <a href="/about.html">
                 About
             </a>
-
 
             <a href="/contact.html">
                 Contact
@@ -720,15 +778,15 @@
 
 
             <h1>
-                Explore Fashion, Beauty, Shopping & Home
+                Explore Every Category
             </h1>
 
 
             <p>
-                Discover fashion trends, outfit ideas, street style,
-                shopping inspiration, beauty, skincare, home ideas,
-                gardening and lifestyle content organized into
-                easy-to-explore categories.
+                Discover fashion trends, beauty inspiration,
+                street style, shopping guides, home ideas,
+                gardening and lifestyle content — all organized
+                into easy-to-explore categories.
             </p>
 
         </div>
@@ -738,7 +796,7 @@
 </section>
 
 
-<!-- MAIN CATEGORIES -->
+<!-- CATEGORIES -->
 
 <section aria-labelledby="categories-heading">
 
@@ -757,9 +815,9 @@
 
 
             <p>
-                Browse Fashion QD's main categories and discover
-                practical ideas covering personal style, shopping,
-                beauty, home inspiration and everyday living.
+                Browse Fashion QD's categories and discover
+                practical ideas covering fashion, beauty,
+                shopping, home and everyday lifestyle.
             </p>
 
         </div>
@@ -768,12 +826,40 @@
         <div class="categories">
 
 
-            <!-- WOMEN'S FASHION -->
+            <!-- HOME -->
+
+            <a
+                href="/"
+                class="category home"
+                aria-label="Explore Home"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Home
+                    </div>
+
+                    <h3>
+                        Home
+                    </h3>
+
+                    <p>
+                        Discover home inspiration, interiors,
+                        decorating ideas and practical living spaces.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- FASHION -->
 
             <a
                 href="/fashion.html"
                 class="category fashion"
-                aria-label="Explore Women's Fashion"
+                aria-label="Explore Fashion"
             >
 
                 <div class="category-content">
@@ -783,96 +869,12 @@
                     </div>
 
                     <h3>
-                        Women's Fashion
+                        Fashion
                     </h3>
 
                     <p>
-                        Fashion trends, outfit ideas, wardrobe
-                        inspiration and seasonal style guides.
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- STYLE -->
-
-            <a
-                href="/fashion.html"
-                class="category style"
-                aria-label="Explore Style Ideas"
-            >
-
-                <div class="category-content">
-
-                    <div class="category-label">
-                        Style
-                    </div>
-
-                    <h3>
-                        Style Ideas
-                    </h3>
-
-                    <p>
-                        Practical styling ideas for creating
-                        polished and confident everyday looks.
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- STREET STYLE -->
-
-            <a
-                href="/fashion.html"
-                class="category street"
-                aria-label="Explore Street Style"
-            >
-
-                <div class="category-content">
-
-                    <div class="category-label">
-                        Street Fashion
-                    </div>
-
-                    <h3>
-                        Street Style
-                    </h3>
-
-                    <p>
-                        Modern streetwear, casual outfits and
-                        everyday city fashion inspiration.
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- SHOPPING -->
-
-            <a
-                href="/fashion.html"
-                class="category shopping"
-                aria-label="Explore Shopping"
-            >
-
-                <div class="category-content">
-
-                    <div class="category-label">
-                        Shopping
-                    </div>
-
-                    <h3>
-                        Shopping
-                    </h3>
-
-                    <p>
-                        Shopping inspiration, fashion finds,
-                        wardrobe essentials and useful buying ideas.
+                        Explore fashion trends, outfit ideas,
+                        wardrobe inspiration and seasonal style guides.
                     </p>
 
                 </div>
@@ -899,8 +901,92 @@
                     </h3>
 
                     <p>
-                        Beauty inspiration, makeup ideas and
-                        practical everyday beauty content.
+                        Discover makeup inspiration, beauty ideas
+                        and practical everyday beauty content.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- STREET STYLE -->
+
+            <a
+                href="/street-style.html"
+                class="category street"
+                aria-label="Explore Street Style"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Street Fashion
+                    </div>
+
+                    <h3>
+                        Street Style
+                    </h3>
+
+                    <p>
+                        Explore modern streetwear, casual outfits
+                        and everyday city fashion inspiration.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- SHOPPING -->
+
+            <a
+                href="/shopping.html"
+                class="category shopping"
+                aria-label="Explore Shopping"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Shopping
+                    </div>
+
+                    <h3>
+                        Shopping
+                    </h3>
+
+                    <p>
+                        Discover fashion finds, wardrobe essentials,
+                        shopping guides and useful buying ideas.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- STYLE IDEAS -->
+
+            <a
+                href="/fashion.html"
+                class="category style"
+                aria-label="Explore Style Ideas"
+            >
+
+                <div class="category-content">
+
+                    <div class="category-label">
+                        Style
+                    </div>
+
+                    <h3>
+                        Style Ideas
+                    </h3>
+
+                    <p>
+                        Find practical styling ideas for creating
+                        polished and confident everyday looks.
                     </p>
 
                 </div>
@@ -919,7 +1005,7 @@
                 <div class="category-content">
 
                     <div class="category-label">
-                        Skincare
+                        Beauty
                     </div>
 
                     <h3>
@@ -927,36 +1013,8 @@
                     </h3>
 
                     <p>
-                        Skincare inspiration, routine ideas and
-                        simple beauty habits for everyday life.
-                    </p>
-
-                </div>
-
-            </a>
-
-
-            <!-- HOME -->
-
-            <a
-                href="/"
-                class="category home"
-                aria-label="Explore Home Inspiration"
-            >
-
-                <div class="category-content">
-
-                    <div class="category-label">
-                        Home
-                    </div>
-
-                    <h3>
-                        Home
-                    </h3>
-
-                    <p>
-                        Home inspiration, interiors, decorating
-                        ideas and practical living spaces.
+                        Explore skincare routines, simple beauty
+                        habits and everyday skincare inspiration.
                     </p>
 
                 </div>
@@ -983,8 +1041,8 @@
                     </h3>
 
                     <p>
-                        Garden planning, planting ideas and practical
-                        inspiration for creating beautiful outdoor spaces.
+                        Discover garden planning, planting ideas
+                        and inspiration for beautiful outdoor spaces.
                     </p>
 
                 </div>
@@ -1011,8 +1069,8 @@
                     </h3>
 
                     <p>
-                        Fashion, beauty, home and everyday lifestyle
-                        inspiration for modern living.
+                        Explore fashion, beauty, home and everyday
+                        lifestyle inspiration for modern living.
                     </p>
 
                 </div>
@@ -1047,7 +1105,7 @@
 
             <p>
                 Discover practical guides and inspiration covering
-                fashion trends, seasonal style and everyday ideas.
+                fashion trends, street style, shopping and everyday ideas.
             </p>
 
         </div>
@@ -1100,9 +1158,9 @@
 
 
             <p>
-                Fashion QD brings different areas of fashion,
-                beauty and lifestyle together so readers can
-                discover new ideas in one place.
+                Fashion QD brings fashion, beauty, street style,
+                shopping and lifestyle topics together so readers
+                can discover new ideas in one place.
             </p>
 
         </div>
@@ -1119,7 +1177,8 @@
 
                 <p>
                     Explore seasonal fashion trends, modern outfit
-                    ideas and style inspiration for different occasions.
+                    ideas, street style and inspiration for different
+                    occasions.
                 </p>
 
             </article>
@@ -1170,45 +1229,60 @@
         <div class="info-content">
 
             <h2 id="info-heading">
-                Fashion, Beauty, Home & Lifestyle Inspiration
+                Fashion, Beauty, Street Style, Shopping & Lifestyle
             </h2>
 
 
             <p>
                 Fashion QD brings together fashion trends,
-                personal style inspiration, street style,
-                shopping ideas, beauty, skincare, home,
-                gardening and lifestyle content for modern readers.
+                personal style, street style, shopping ideas,
+                beauty, skincare, home, gardening and lifestyle
+                content for modern readers.
             </p>
 
 
             <p>
+
                 Start with our
                 <a href="/fashion.html">
                     fashion content
                 </a>,
+
                 explore
                 <a href="/beauty.html">
                     beauty and skincare
                 </a>,
-                or browse the categories above to discover
-                more inspiration.
+
+                discover
+                <a href="/street-style.html">
+                    street style
+                </a>,
+
+                or browse our
+                <a href="/shopping.html">
+                    shopping guides
+                </a>.
+
             </p>
 
 
             <p>
+
                 You can also read our
                 <a href="/articles/summer-fashion-trends.html">
                     latest fashion article
                 </a>,
+
                 learn more
                 <a href="/about.html">
                     about Fashion QD
                 </a>
+
                 or
                 <a href="/contact.html">
                     contact us
                 </a>.
+
             </p>
 
         </div>
@@ -1230,8 +1304,8 @@
 
 
         <p>
-            Explore Fashion QD's fashion, street style, shopping,
-            beauty, home and lifestyle categories and discover
+            Explore Fashion QD's fashion, beauty, street style,
+            shopping, home and lifestyle categories and discover
             ideas for your everyday life.
         </p>
 
@@ -1276,6 +1350,18 @@
 
             <a href="/categories.html">
                 Categories
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/street-style.html">
+                Street Style
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a href="/shopping.html">
+                Shopping
             </a>
 
             &nbsp; | &nbsp;
