@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About Fashion QD | Fashion, Beauty & Lifestyle</title>
+    <title>About Fashion QD | Fashion, Beauty, Street Style & Shopping</title>
 
-    <meta name="description" content="Learn more about Fashion QD, a fashion, beauty and lifestyle publication sharing useful trends, styling ideas, beauty inspiration and everyday advice.">
+    <meta name="description" content="Learn more about Fashion QD, a fashion, beauty, street style and shopping publication sharing useful trends, styling ideas, beauty inspiration and everyday advice.">
 
     <meta name="robots" content="index, follow">
 
@@ -19,11 +19,16 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             color: #333;
             background: #fff;
             line-height: 1.7;
+            overflow-x: hidden;
         }
 
         a {
@@ -36,9 +41,15 @@
             margin: auto;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         header {
             background: #fff;
             border-bottom: 1px solid #e8e8e8;
+            position: relative;
+            z-index: 10;
         }
 
         .header-inner {
@@ -62,18 +73,46 @@
 
         nav {
             display: flex;
-            gap: 27px;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: #333;
             font-size: 14px;
             font-weight: bold;
+            position: relative;
+            transition: color .3s ease;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: #b48a64;
+            transition: width .3s ease;
         }
 
         nav a:hover {
             color: #b48a64;
         }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        nav a.active {
+            color: #b48a64;
+        }
+
+        /* =========================
+           HERO
+           No Fashion QD opening animation
+        ========================= */
 
         .hero {
             background:
@@ -112,6 +151,10 @@
             color: #f1f1f1;
         }
 
+        /* =========================
+           SECTIONS
+        ========================= */
+
         .section {
             padding: 85px 0;
         }
@@ -148,6 +191,10 @@
             background: #f7f5f2;
         }
 
+        /* =========================
+           MISSION
+        ========================= */
+
         .mission {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -159,12 +206,17 @@
             width: 100%;
             height: 470px;
             object-fit: cover;
+            display: block;
         }
 
         .mission-text p {
             color: #666;
             margin-bottom: 18px;
         }
+
+        /* =========================
+           CARDS
+        ========================= */
 
         .cards {
             display: grid;
@@ -177,6 +229,16 @@
             border: 1px solid #e5e5e5;
             padding: 30px 24px;
             background: #fff;
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease,
+                border-color .35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+            border-color: #d5c1ad;
         }
 
         .card h3 {
@@ -191,6 +253,10 @@
             font-size: 15px;
         }
 
+        /* =========================
+           APPROACH
+        ========================= */
+
         .approach {
             max-width: 850px;
             margin: auto;
@@ -201,6 +267,10 @@
             color: #666;
             margin-bottom: 18px;
         }
+
+        /* =========================
+           CTA
+        ========================= */
 
         .cta {
             background: #111;
@@ -225,12 +295,21 @@
             color: #fff;
             padding: 13px 25px;
             font-weight: bold;
+            transition:
+                background .3s ease,
+                color .3s ease,
+                transform .3s ease;
         }
 
         .button:hover {
             background: #fff;
             color: #111;
+            transform: translateY(-3px);
         }
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #0c0c0c;
@@ -245,6 +324,86 @@
 
         footer a {
             color: #fff;
+            transition: color .3s ease;
+        }
+
+        footer a:hover {
+            color: #b48a64;
+        }
+
+        /* =========================
+           PAGE ENTER / SCROLL ANIMATION
+           No logo/opening animation
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-45px);
+            transition:
+                opacity .9s ease,
+                transform .9s ease;
+        }
+
+        .reveal-left.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(45px);
+            transition:
+                opacity .9s ease,
+                transform .9s ease;
+        }
+
+        .reveal-right.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .card.reveal:nth-child(2) {
+            transition-delay: .08s;
+        }
+
+        .card.reveal:nth-child(3) {
+            transition-delay: .16s;
+        }
+
+        .card.reveal:nth-child(4) {
+            transition-delay: .24s;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .header-inner {
+                gap: 20px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         @media (max-width: 900px) {
@@ -255,16 +414,11 @@
             }
 
             nav {
-                flex-wrap: wrap;
                 justify-content: center;
             }
 
             .mission {
                 grid-template-columns: 1fr;
-            }
-
-            .cards {
-                grid-template-columns: 1fr 1fr;
             }
 
             .hero h1 {
@@ -286,6 +440,10 @@
                 font-size: 37px;
             }
 
+            .hero p {
+                font-size: 16px;
+            }
+
             h2 {
                 font-size: 34px;
             }
@@ -293,19 +451,48 @@
             .mission-image {
                 height: 350px;
             }
+
+            nav {
+                gap: 13px 18px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+
+            .reveal,
+            .reveal-left,
+            .reveal-right {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-   
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 </head>
-    
 
 <body>
-    
 
 <header>
     <div class="container header-inner">
@@ -318,8 +505,10 @@
             <a href="index.html">Home</a>
             <a href="fashion.html">Fashion</a>
             <a href="beauty.html">Beauty</a>
+            <a href="street-style.html">Street Style</a>
+            <a href="shopping.html">Shopping</a>
             <a href="categories.html">Categories</a>
-            <a href="about.html">About</a>
+            <a href="about.html" class="active">About</a>
             <a href="contact.html">Contact</a>
         </nav>
 
@@ -327,9 +516,11 @@
 </header>
 
 
+<!-- HERO: NO FASHION QD OPENING ANIMATION -->
+
 <section class="hero">
 
-    <div class="container hero-content">
+    <div class="container hero-content reveal">
 
         <span>About Fashion QD</span>
 
@@ -347,7 +538,7 @@
 
 <section class="section">
 
-    <div class="container intro">
+    <div class="container intro reveal">
 
         <span class="label">Who We Are</span>
 
@@ -373,17 +564,18 @@
 
     <div class="container mission">
 
-        <div>
+        <div class="reveal-left">
 
             <img
                 class="mission-image"
                 src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=85"
                 alt="Fashion clothing and modern style collection"
+                loading="lazy"
             >
 
         </div>
 
-        <div class="mission-text">
+        <div class="mission-text reveal-right">
 
             <span class="label">Our Mission</span>
 
@@ -416,15 +608,15 @@
 
     <div class="container">
 
-        <div class="intro">
+        <div class="intro reveal">
 
             <span class="label">What We Cover</span>
 
             <h2>Explore Fashion QD</h2>
 
             <p>
-                Our content covers several areas of fashion, beauty and
-                lifestyle.
+                Our content covers several areas of fashion, beauty,
+                street style, shopping and lifestyle.
             </p>
 
         </div>
@@ -432,7 +624,7 @@
 
         <div class="cards">
 
-            <div class="card">
+            <div class="card reveal">
 
                 <h3>Fashion</h3>
 
@@ -444,7 +636,7 @@
             </div>
 
 
-            <div class="card">
+            <div class="card reveal">
 
                 <h3>Beauty</h3>
 
@@ -456,25 +648,25 @@
             </div>
 
 
-            <div class="card">
+            <div class="card reveal">
 
-                <h3>Style</h3>
+                <h3>Street Style</h3>
 
                 <p>
-                    Find practical styling advice and ideas for creating
-                    confident and versatile looks.
+                    Discover street style inspiration, everyday looks,
+                    fashion trends and modern styling ideas.
                 </p>
 
             </div>
 
 
-            <div class="card">
+            <div class="card reveal">
 
-                <h3>Lifestyle</h3>
+                <h3>Shopping</h3>
 
                 <p>
-                    Discover lifestyle inspiration that connects fashion,
-                    beauty and modern everyday living.
+                    Explore shopping inspiration, fashion finds, useful
+                    product ideas and everyday style essentials.
                 </p>
 
             </div>
@@ -488,7 +680,7 @@
 
 <section class="section light">
 
-    <div class="container approach">
+    <div class="container approach reveal">
 
         <span class="label">Our Approach</span>
 
@@ -517,7 +709,7 @@
 
 <section class="cta">
 
-    <div class="container">
+    <div class="container reveal">
 
         <h2>Have a Question?</h2>
 
@@ -545,11 +737,49 @@
         <a href="index.html">Home</a> |
         <a href="fashion.html">Fashion</a> |
         <a href="beauty.html">Beauty</a> |
+        <a href="street-style.html">Street Style</a> |
+        <a href="shopping.html">Shopping</a> |
         <a href="categories.html">Categories</a> |
         <a href="contact.html">Contact</a>
     </p>
 
 </footer>
+
+
+<script>
+    /* =========================
+       SCROLL REVEAL ANIMATION
+       ========================= */
+
+    const revealElements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        }
+    );
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+</script>
 
 </body>
 </html>
